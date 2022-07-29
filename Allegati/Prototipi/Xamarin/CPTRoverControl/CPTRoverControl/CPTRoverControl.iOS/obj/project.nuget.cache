@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "HDLfQs/7zAG3y1KK+ta8/bf//j4Rc0TGV5f0EYuo0F/A1LLr+ujFiZ4GoDnSvhS45Qa0ZNoq+FcIA3O4piAC3A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\CPTRoverControl\\CPTRoverControl\\CPTRoverControl.iOS\\CPTRoverControl.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\paolo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,4 +1,5 @@
 [Nome]									[Descrizione]
+Prototipi								Cartella contenente dei prototipi creati per testare le librerie
 Annuncio di progetto CPT Cingolato		Annuncio di progetto per il lavoro
 Mockup									Mockup per telefono e tablet realizzati con Balsamiq Wireframes
 Ore di lavoro							Excel con data, ore e descrizione delle attività svolte

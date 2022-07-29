@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CPTRoverControl.Views.Home"
+             xmlns:vm="clr-namespace:CPTRoverControl.ViewModels"
+             xmlns:fontawesome="clr-namespace:FontAwesome"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Start">
+                <!-- top controls -->
+               
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Start">
+                <!-- middle controls -->
+                <Grid>
+                    <Button Text="Stop emergenza"
+                        FontSize="Large"
+                        BackgroundColor="PaleVioletRed"
+                        TextColor="White"
+                         Margin="40,0,40,0"/>
+                </Grid>
+            </StackLayout>
+            <AbsoluteLayout HorizontalOptions="End" Margin="0,0,20,0">
+                <Button Text="{x:Static fontawesome:FontAwesomeIcons.Bell}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontSize="Large"
+                    BackgroundColor="#e8d504"
+                    TextColor="White" />
+            </AbsoluteLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
+                <!-- bottom controls -->
+                <Grid Margin="0,0,0,40">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.33*" />
+                        <ColumnDefinition Width="0.33*" />
+                        <ColumnDefinition Width="0.33*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Text="{x:Static fontawesome:FontAwesomeIcons.CaretUp}"
+                        FontFamily="{StaticResource FontAwesomeSolid}"
+                        FontSize="Large"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        Grid.Row="0"
+                        Grid.Column="1" />
+                    
+                    <Button Text="{x:Static fontawesome:FontAwesomeIcons.CaretLeft}"
+                        FontFamily="{StaticResource FontAwesomeSolid}"
+                        FontSize="Large"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        Grid.Row="1"
+                        Grid.Column="0" />
+
+                    <Button Text="{x:Static fontawesome:FontAwesomeIcons.CaretRight}"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="Large"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White"
+                            Grid.Row="1"
+                            Grid.Column="2" />
+
+                    <Button Text="{x:Static fontawesome:FontAwesomeIcons.CaretDown}"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="Large"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White"
+                            Grid.Row="2"
+                            Grid.Column="1" />
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
