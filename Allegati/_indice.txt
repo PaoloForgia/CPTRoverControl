@@ -2,6 +2,6 @@
 Prototipi								Cartella contenente dei prototipi creati per testare le librerie
 Annuncio di progetto CPT Cingolato		Annuncio di progetto per il lavoro
 Comparazione tecnologie					Excel con una versione semplificata della comparazione tra React Native e Xamarin
-Mockup									Mockup per telefono e tablet realizzati con Balsamiq Wireframes
+Mockup									Mockup per telefono e tablet
 Progetto Rover							Progetto effettuato da Mattia Bassi per la realizzazione del rover telecomandato
 Quaderno dei compiti					Quaderno dei compiti con la descrizione e i requisiti per la realizzazione del progetto
