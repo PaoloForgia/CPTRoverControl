@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "zr/EtOTUcYAOrOcltO3lNoqfbEpG+/ayKcfm5NJy3mTUbH6FQlCC8jrIXvBcgbqTlDstrMIrWUPZeVk0VqiYCQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\paolo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
