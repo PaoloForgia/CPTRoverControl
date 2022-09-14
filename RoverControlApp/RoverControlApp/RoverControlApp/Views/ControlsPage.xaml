@@ -2,10 +2,17 @@
 <ContentPage
     x:Class="RoverControlApp.Views.ControlsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:RoverControlApp.ViewModels"
+    Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:ControlsViewModel />
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
 
         <!--  Bottom controls  -->
+        <!--
         <StackLayout
             Margin="0,0,0,50"
             HorizontalOptions="End"
@@ -22,7 +29,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="150" />
+                    <RowDefinition Height="300" />
                 </Grid.RowDefinitions>
                 <Slider
                     Grid.Row="0"
@@ -51,5 +58,44 @@
                     ThumbColor="{StaticResource Primary}" />
             </Grid>
         </StackLayout>
+        -->
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                <!--  top controls  -->
+                <Label HorizontalOptions="Center" Text="Top" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <!--  middle controls  -->
+                <Label HorizontalOptions="Center" Text="Middle" />
+            </StackLayout>
+
+            <StackLayout
+                Margin="0,0,0,50"
+                HeightRequest="300"
+                Orientation="Horizontal"
+                VerticalOptions="End">
+                <!--  bottom controls  -->
+                <Slider
+                    Maximum="255"
+                    MaximumTrackColor="Gray"
+                    Minimum="0"
+                    MinimumTrackColor="{StaticResource Primary}"
+                    Rotation="-90"
+                    ThumbColor="{StaticResource Primary}"
+                    TranslationX="-100"
+                    WidthRequest="300" />
+                <Slider
+                    Maximum="255"
+                    MaximumTrackColor="Gray"
+                    Minimum="0"
+                    MinimumTrackColor="{StaticResource Primary}"
+                    Rotation="-90"
+                    ThumbColor="{StaticResource Primary}"
+                    TranslationX="-125"
+                    WidthRequest="300" />
+            </StackLayout>
+        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
