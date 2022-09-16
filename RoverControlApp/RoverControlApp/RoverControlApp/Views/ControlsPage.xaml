@@ -70,32 +70,33 @@
                 <Label HorizontalOptions="Center" Text="Middle" />
             </StackLayout>
 
-            <StackLayout
-                Margin="0,0,0,50"
-                HeightRequest="300"
-                Orientation="Horizontal"
-                VerticalOptions="End">
+            <AbsoluteLayout HeightRequest="400" VerticalOptions="End">
                 <!--  bottom controls  -->
                 <Slider
+                    AbsoluteLayout.LayoutBounds="-3, 0.5, 0.9, 0.2"
+                    AbsoluteLayout.LayoutFlags="All"
                     Maximum="255"
                     MaximumTrackColor="Gray"
                     Minimum="0"
                     MinimumTrackColor="{StaticResource Primary}"
                     Rotation="-90"
                     ThumbColor="{StaticResource Primary}"
-                    TranslationX="-100"
                     WidthRequest="300" />
+                <Button
+                    AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.33, 0.15"
+                    AbsoluteLayout.LayoutFlags="All"
+                    Text="Bell" />
                 <Slider
+                    AbsoluteLayout.LayoutBounds="4, 0.5, 0.9, 0.2"
+                    AbsoluteLayout.LayoutFlags="All"
                     Maximum="255"
                     MaximumTrackColor="Gray"
                     Minimum="0"
                     MinimumTrackColor="{StaticResource Primary}"
                     Rotation="-90"
                     ThumbColor="{StaticResource Primary}"
-                    TranslationX="-125"
                     WidthRequest="300" />
-            </StackLayout>
+            </AbsoluteLayout>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>
