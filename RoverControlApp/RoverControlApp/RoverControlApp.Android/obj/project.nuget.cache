@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "teOymu24Ck5Q4sQR4+gXc7/NqpOnH/xBjI5FcoRvOttvQxRsoSTQY6SjgKjN2CnXoQK4s7303q3WGamU3Kj4gA==",
+  "dgSpecHash": "tN0c0JUI8xxyjwdU8x5saIgCkJ03JxfAHtcJiQV79+pPclaJMuKKWy3vbJbzO/LSnMaNB+193n/1yksaZdAptw==",
   "success": true,
   "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.Android\\RoverControlApp.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\paolo\\.nuget\\packages\\plugin.bluetoothclassic\\1.1.5\\plugin.bluetoothclassic.1.1.5.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",

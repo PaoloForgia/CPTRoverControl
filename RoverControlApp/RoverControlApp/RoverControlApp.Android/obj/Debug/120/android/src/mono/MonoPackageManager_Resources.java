@@ -4,6 +4,8 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "RoverControlApp.Android.dll" comes first in this list. */
 		"RoverControlApp.Android.dll",
 		"FormsViewGroup.dll",
+		"Plugin.BluetoothClassic.Abstractions.dll",
+		"Plugin.BluetoothClassic.Android.dll",
 		"RoverControlApp.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",

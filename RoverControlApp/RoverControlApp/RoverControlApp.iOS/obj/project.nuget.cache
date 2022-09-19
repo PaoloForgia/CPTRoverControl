@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "zr/EtOTUcYAOrOcltO3lNoqfbEpG+/ayKcfm5NJy3mTUbH6FQlCC8jrIXvBcgbqTlDstrMIrWUPZeVk0VqiYCQ==",
+  "dgSpecHash": "DOwfaYVweEigl9LmaICta6tl3l0gAmrsE4FQSbW8EUv9F6za2D6Ouz/A5iRgm+bb3Jy5NdrGzwlj+bZOtOg6OA==",
   "success": true,
   "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\paolo\\.nuget\\packages\\plugin.bluetoothclassic\\1.1.5\\plugin.bluetoothclassic.1.1.5.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],

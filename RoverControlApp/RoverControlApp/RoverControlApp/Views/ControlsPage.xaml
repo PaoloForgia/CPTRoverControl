@@ -10,55 +10,7 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-
         <!--  Bottom controls  -->
-        <!--
-        <StackLayout
-            Margin="0,0,0,50"
-            HorizontalOptions="End"
-            Orientation="Vertical"
-            Spacing="0"
-            VerticalOptions="End">
-            <Grid
-                ColumnSpacing="0"
-                HorizontalOptions="FillAndExpand"
-                RowSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="300" />
-                </Grid.RowDefinitions>
-                <Slider
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Maximum="255"
-                    MaximumTrackColor="Gray"
-                    Minimum="0"
-                    MinimumTrackColor="{StaticResource Primary}"
-                    Rotation="-90"
-                    ThumbColor="{StaticResource Primary}" />
-                <StackLayout
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center">
-                    <Label HorizontalOptions="CenterAndExpand" Text="Buzzer Button" />
-                </StackLayout>
-                <Slider
-                    Grid.Row="0"
-                    Grid.Column="2"
-                    Maximum="255"
-                    MaximumTrackColor="Gray"
-                    Minimum="0"
-                    MinimumTrackColor="{StaticResource Primary}"
-                    Rotation="-90"
-                    ThumbColor="{StaticResource Primary}" />
-            </Grid>
-        </StackLayout>
-        -->
         <StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="Start">
                 <!--  top controls  -->
