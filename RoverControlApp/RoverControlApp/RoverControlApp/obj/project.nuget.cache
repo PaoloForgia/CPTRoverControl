@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "J3OayX+d6MP7po8Ct0S9tkMirvDG2NXAgvyxZVG4x8bl3FRstPR+mre5rm15YHvG8IMLETPEVXQBspZ9T4GXjQ==",
+  "dgSpecHash": "77JR7W0SWKDR3CYkwhUbVLAh7Pf6G4q7Pdb/my9rJJF1S1ckkR1p4+HybzOInocXu+wkNvqUw3IXc8MhuhdRYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj",
   "expectedPackageFiles": [
@@ -15,8 +15,8 @@
     "C:\\Users\\paolo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\paolo\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512"
   ],
   "logs": [
     {
