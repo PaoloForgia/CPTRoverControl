@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tN0c0JUI8xxyjwdU8x5saIgCkJ03JxfAHtcJiQV79+pPclaJMuKKWy3vbJbzO/LSnMaNB+193n/1yksaZdAptw==",
+  "dgSpecHash": "MrFW4sx65OFj1n9o3lLrL8z+981iMVFw8TvUV4wGBiq8n/kjQsRipIbK8KMhFEB6RYL57lCXnJ+vEnJlPETH8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.Android\\RoverControlApp.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.1\\microsoft.net.test.sdk.17.3.1.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\plugin.bluetoothclassic\\1.1.5\\plugin.bluetoothclassic.1.1.5.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

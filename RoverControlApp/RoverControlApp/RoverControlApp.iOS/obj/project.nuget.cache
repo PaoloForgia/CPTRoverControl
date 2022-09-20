@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DOwfaYVweEigl9LmaICta6tl3l0gAmrsE4FQSbW8EUv9F6za2D6Ouz/A5iRgm+bb3Jy5NdrGzwlj+bZOtOg6OA==",
+  "dgSpecHash": "Ts3hGOPfSqIlBmg/OSkG9oT9PF7rSzmMQBP0lpzudTd2OI0O8b2sxmUYMP2AF50mD8WQ3xMXDRJ2wLOe9oakxQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.1\\microsoft.net.test.sdk.17.3.1.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\plugin.bluetoothclassic\\1.1.5\\plugin.bluetoothclassic.1.1.5.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

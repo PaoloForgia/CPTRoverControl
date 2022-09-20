@@ -1,4 +1,5 @@
-﻿using RoverControlApp.Services;
+﻿using RoverControlApp.Models;
+using RoverControlApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
