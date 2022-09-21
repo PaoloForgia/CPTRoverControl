@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "NlPMt2O5t5VCmGilHcRqeI6W/gqLOuCdObBUXAIDHbSqqwtL/4RWpOc/U3E1nqqXnTis/75rLx7uewHLUiYq/Q==",
+  "dgSpecHash": "SzWpHRL2uVVCGqd13vkPBGqfeRxVW3B5e6N7BImtMdLBcTOkJB+UJQlGNlvCQO4krjxZAE2EguDoW5WPwWu2BA==",
   "success": true,
   "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.Android\\RoverControlApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.1\\microsoft.net.test.sdk.17.3.1.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\mstest.testadapter\\2.2.10\\mstest.testadapter.2.2.10.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\plugin.bluetoothclassic\\1.1.5\\plugin.bluetoothclassic.1.1.5.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\system.diagnostics.textwritertracelistener\\4.3.0\\system.diagnostics.textwritertracelistener.4.3.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",

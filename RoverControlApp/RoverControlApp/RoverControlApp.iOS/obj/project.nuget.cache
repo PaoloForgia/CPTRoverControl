@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "pebpc3k83nnZR/kMq/CvVm89/z1hhj9oh8mfMdggoLLkuuE/5khBJOkqSdM42YkUFJ05nSDsxZRuvyYwskWEYw==",
+  "dgSpecHash": "pz8ILfYSyjMPE9v9+RiyIHC3GYFMWysVgPnxyxcWrdl1xh1snX5Zc5pTuvn4ugjZ54CTmnWnpldXR15/MxlIHA==",
   "success": true,
   "projectFilePath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.1\\microsoft.net.test.sdk.17.3.1.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\mstest.testadapter\\2.2.10\\mstest.testadapter.2.2.10.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\plugin.bluetoothclassic\\1.1.5\\plugin.bluetoothclassic.1.1.5.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\system.diagnostics.textwritertracelistener\\4.3.0\\system.diagnostics.textwritertracelistener.4.3.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",

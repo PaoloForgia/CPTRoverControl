@@ -12,7 +12,7 @@
     <ContentPage.Content>
         <!--  Bottom controls  -->
         <StackLayout>
-            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+            <StackLayout VerticalOptions="Start">
                 <!--  top controls  -->
                 <Label HorizontalOptions="Center" Text="Top" />
             </StackLayout>
