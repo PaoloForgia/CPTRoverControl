@@ -28,7 +28,7 @@ namespace RoverControlApp.Services
 
         public void Enable() => bluetoothAdapter.Enable();
 
-        public IEnumerable<BluetoothDeviceModel> GetDevices () => bluetoothAdapter.BondedDevices;
+        public IEnumerable<BluetoothDeviceModel> GetDevices() => bluetoothAdapter.BondedDevices;
 
         public async Task<bool> Connect(BluetoothDeviceModel bluetoothDeviceModel)
         {
