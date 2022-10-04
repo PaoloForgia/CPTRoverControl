@@ -38,7 +38,10 @@ namespace RoverControlApp.Views
         {
             Console.WriteLine("Bell");
             var bluetooth = new Bluetooth();
-            Console.WriteLine(bluetooth.Enabled);
+            Console.WriteLine(bluetooth.GetDevices().Count()); 
+            foreach (var device in bluetooth.GetDevices()) {
+                Console.WriteLine(device);
+            }
         }
     }
 }

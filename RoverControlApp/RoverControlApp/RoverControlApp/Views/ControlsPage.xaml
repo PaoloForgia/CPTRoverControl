@@ -12,14 +12,81 @@
     <ContentPage.Content>
         <!--  Bottom controls  -->
         <StackLayout>
-            <StackLayout VerticalOptions="Start">
+            <StackLayout Margin="10,10,10,10" VerticalOptions="Start">
                 <!--  top controls  -->
-                <Label HorizontalOptions="Center" Text="Top" />
+                <Frame Margin="10,0,10,10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Start"
+                            Text="Batteria" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            HorizontalOptions="End"
+                            Text="100%" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalOptions="Start"
+                            Text="Distanza" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalOptions="End"
+                            Text="100 cm" />
+                    </Grid>
+                </Frame>
+
+                <Frame Margin="10,0,10,10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Start"
+                            Text="Luce anteriore" />
+                        <Switch
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            HorizontalOptions="End"
+                            IsToggled="true" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalOptions="Start"
+                            Text="Luce posteriore" />
+                        <Switch
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalOptions="End"
+                            IsToggled="false" />
+                    </Grid>
+                </Frame>
             </StackLayout>
 
             <StackLayout VerticalOptions="CenterAndExpand">
                 <!--  middle controls  -->
-                <Label HorizontalOptions="Center" Text="Middle" />
+                <Button
+                    Margin="40,0,40,0"
+                    BackgroundColor="#FF694F"
+                    Text="Stop emergenza" />
             </StackLayout>
 
             <AbsoluteLayout HeightRequest="400" VerticalOptions="End">
