@@ -3,6 +3,7 @@
     x:Class="RoverControlApp.Views.ControlsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fontawesome="clr-namespace:FontAwesome"
     xmlns:vm="clr-namespace:RoverControlApp.ViewModels"
     Title="{Binding Title}">
     <ContentPage.BindingContext>
@@ -21,27 +22,48 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="21" />
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
                         </Grid.ColumnDefinitions>
                         <Label
                             Grid.Row="0"
                             Grid.Column="0"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Text="battery-three-quarters"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="Medium"
                             HorizontalOptions="Start"
                             Text="Batteria" />
                         <Label
                             Grid.Row="0"
-                            Grid.Column="1"
+                            Grid.Column="2"
+                            FontSize="Medium"
                             HorizontalOptions="End"
                             Text="100%" />
                         <Label
                             Grid.Row="1"
                             Grid.Column="0"
-                            HorizontalOptions="Start"
-                            Text="Distanza" />
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Text="location-crosshairs"
+                            VerticalOptions="Center" />
                         <Label
                             Grid.Row="1"
                             Grid.Column="1"
+                            FontSize="Medium"
+                            HorizontalOptions="Start"
+                            Text="Distanza ostacolo" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            FontSize="Medium"
                             HorizontalOptions="End"
                             Text="100 cm" />
                     </Grid>
@@ -54,29 +76,55 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="21" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Label
                             Grid.Row="0"
                             Grid.Column="0"
+                            FontFamily="{StaticResource FontAwesomeRegular}"
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Text="lightbulb"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="Medium"
                             HorizontalOptions="Start"
                             Text="Luce anteriore" />
                         <Switch
                             Grid.Row="0"
-                            Grid.Column="1"
+                            Grid.Column="2"
                             HorizontalOptions="End"
-                            IsToggled="true" />
+                            IsToggled="true"
+                            OnColor="#93cbf9"
+                            Scale="1.2"
+                            ThumbColor="{StaticResource Primary}" />
+
                         <Label
                             Grid.Row="1"
                             Grid.Column="0"
+                            FontFamily="{StaticResource FontAwesomeRegular}"
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Text="lightbulb"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="Medium"
                             HorizontalOptions="Start"
                             Text="Luce posteriore" />
                         <Switch
                             Grid.Row="1"
-                            Grid.Column="1"
+                            Grid.Column="2"
                             HorizontalOptions="End"
-                            IsToggled="false" />
+                            IsToggled="false"
+                            OnColor="#93cbf9"
+                            Scale="1.2"
+                            ThumbColor="{StaticResource Primary}" />
                     </Grid>
                 </Frame>
             </StackLayout>
@@ -86,7 +134,12 @@
                 <Button
                     Margin="40,0,40,0"
                     BackgroundColor="#FF694F"
-                    Text="Stop emergenza" />
+                    CharacterSpacing="1"
+                    CornerRadius="50"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontSize="Large"
+                    HeightRequest="70"
+                    Text="&#xf256; Stop emergenza" />
             </StackLayout>
 
             <AbsoluteLayout HeightRequest="400" VerticalOptions="End">
@@ -104,11 +157,14 @@
                     ValueChanged="OnLeftSliderValueChanged"
                     WidthRequest="300" />
                 <Button
-                    AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.33, 0.15"
+                    AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.25, 0.25"
                     AbsoluteLayout.LayoutFlags="All"
                     Clicked="OnBellClicked"
                     Command="{Binding EnableBluetoothCommand}"
-                    Text="Bell" />
+                    CornerRadius="50"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontSize="Large"
+                    Text="bell" />
                 <Slider
                     x:Name="rightSlider"
                     AbsoluteLayout.LayoutBounds="4, 0.5, 0.9, 0.2"
