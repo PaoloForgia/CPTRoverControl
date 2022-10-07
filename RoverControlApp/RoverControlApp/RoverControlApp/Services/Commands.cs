@@ -64,7 +64,7 @@ namespace RoverControlApp.Services
             else return null;
         }
 
-        public bool IsMultipleValue(string value) => value.Split('\n').Length > 1;
+        public static bool IsMultipleValue(string value) => value.Split('\n').Length > 1;
 
         private int? GetValue(string value)
         {
@@ -78,7 +78,37 @@ namespace RoverControlApp.Services
 
         public static bool IsBoolValid(int value) => value == 0 || value == 1;
 
-        // Letter followed than 1 to 3 numbers
-        public static bool IsValidData(string value) => Regex.IsMatch(value, @"[A-Z]+[0-9]{1,3}\n");
+        public static bool IsValidData(string value)
+        {
+            if (value == null) return false;
+
+            // Uppercase letter followed by 1 to 3 numbers and ends with \n
+            if (!Regex.IsMatch(value, "[A-Z][0-9]{1,3}\\n")) return false;
+
+            var command = value[0];
+            var number = Int32.Parse(value.Substring(1, value.Length - 2));
+
+            return number >= 0 && number <= GetMax(command);
+        }
+
+        private static int GetMax(char command)
+        {
+            switch (command)
+            {
+                case 'L': // Left engine
+                case 'R': // Right engine
+                    return 255;
+                case 'B': // Buzzer
+                case 'F': // Front light
+                case 'P': // Back light
+                case 'S': // Emergency stop
+                    return 1;
+                case 'T': // Battery percentage
+                case 'D': // Distance in cm from obstacle
+                    return 100;
+                default:
+                    return -1;
+            }
+        }
     }
 }

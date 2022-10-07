@@ -16,7 +16,7 @@ namespace RoverControlApp.ViewModels
 
         public ControlsViewModel()
         {
-            Title = "Rover Controls";
+            Title = $"Rover Controls - {Storage.ModuleName}";
             EnableBluetoothCommand = new Command(EnableBluetooth);
         }
 

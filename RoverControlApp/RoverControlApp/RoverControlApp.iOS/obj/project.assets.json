@@ -1992,24 +1992,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paolo\\.nuget\\packages\\": {},
+    "C:\\Users\\paolo.forgia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
       "projectName": "RoverControlApp.iOS",
-      "projectPath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\obj\\",
+      "projectPath": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\paolo.forgia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\paolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paolo.forgia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2023,8 +2023,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj": {
-              "projectPath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj"
+            "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj": {
+              "projectPath": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj"
             }
           }
         }
