@@ -18,8 +18,9 @@ namespace RoverControlApp.Services
         public static readonly string MODULE_NAME_PROPERTY = "module_name";
         public static readonly string MODULE_NAME_DEFAULT = "HC-05";
         private readonly IBluetoothAdapter _bluetoothAdapter;
-        private IBluetoothManagedConnection _connection;
         private BluetoothDeviceModel _device;
+        private IBluetoothManagedConnection _connection;
+
         public BluetoothDeviceModel Device
         {
             get 
@@ -38,8 +39,6 @@ namespace RoverControlApp.Services
 		{
             _bluetoothAdapter = DependencyService.Resolve<IBluetoothAdapter>();
         }
-
-        public IBluetoothManagedConnection Connection { get { return _connection; } }
 
         public bool Enabled => _bluetoothAdapter.Enabled;
 
