@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +14,6 @@ namespace RoverControlApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ControlsPage : ContentPage
     {
-
         public ControlsPage()
         {
             InitializeComponent();
@@ -34,21 +34,19 @@ namespace RoverControlApp.Views
             // Console.WriteLine("Right Slider " + value);
         }
 
-        async void OnBellClicked(object sender, EventArgs args)
+        void TurnOnBuzzer(object sender, EventArgs args)
         {
-            Console.WriteLine("Bell");
-            var bluetooth = new Bluetooth();
-            Console.WriteLine(bluetooth.Device.Name);
-
-            var connect = await bluetooth.Connect(bluetooth.Device);
-
-            if (connect)
+            while (true)
             {
-                var commands = new Commands();
-
-                var buzzer = commands.Buzzer(1);
-                bluetooth.Send(buzzer);
-            }
+                if (BellButton.IsPressed)
+                {
+                    Console.WriteLine("Pressed");
+                } else
+                {
+                    Console.WriteLine("Pressed");
+                    break;
+                }
+            } 
         }
     }
 }
