@@ -1,8 +1,10 @@
-﻿using RoverControlApp.Services;
+﻿using RoverControlApp.Models;
+using RoverControlApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
@@ -14,6 +16,8 @@ namespace RoverControlApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ControlsPage : ContentPage
     {
+        private readonly BuzzerAction _buzzerAction = new BuzzerAction();
+
         public ControlsPage()
         {
             InitializeComponent();
@@ -36,17 +40,12 @@ namespace RoverControlApp.Views
 
         void TurnOnBuzzer(object sender, EventArgs args)
         {
-            while (true)
-            {
-                if (BellButton.IsPressed)
-                {
-                    Console.WriteLine("Pressed");
-                } else
-                {
-                    Console.WriteLine("Pressed");
-                    break;
-                }
-            } 
+            _buzzerAction.Start();
+        }
+
+        void TurnOffBuzzer(object sender, EventArgs args)
+        {
+            _buzzerAction.Stop();
         }
     }
 }

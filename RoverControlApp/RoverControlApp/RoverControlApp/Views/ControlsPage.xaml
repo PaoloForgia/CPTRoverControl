@@ -157,13 +157,13 @@
                     ValueChanged="OnLeftSliderValueChanged"
                     WidthRequest="300" />
                 <Button
-                    x:Name="BellButton"
                     AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.25, 0.25"
                     AbsoluteLayout.LayoutFlags="All"
                     CornerRadius="50"
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     FontSize="Large"
                     Pressed="TurnOnBuzzer"
+                    Released="TurnOffBuzzer"
                     Text="bell" />
                 <Slider
                     x:Name="rightSlider"
