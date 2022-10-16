@@ -8,6 +8,8 @@ namespace RoverControlApp.Services
 {
     public class Commands
     {
+        private readonly static string DELIMITER = "\n";
+
         public static string EngineLeft(int value)
         {
             if (!IsSpeedValid(value)) return null;
@@ -52,7 +54,20 @@ namespace RoverControlApp.Services
             else return null;
         }
 
-        public static bool IsMultipleValue(string value) => value.Split('\n').Length > 1;
+        public static string[] ToCommandArray(string commands)
+        {
+            var splitValue = "|";
+            var value = commands.Replace(DELIMITER, $"{DELIMITER}{splitValue}");
+
+            var separators = splitValue.ToCharArray();
+            return value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        public static bool IsMultipleValue(string value)
+        {
+            var values = ToCommandArray(value);
+            return values.Length > 1;
+        }
 
         private static int? GetValue(string value)
         {
@@ -60,7 +75,7 @@ namespace RoverControlApp.Services
             return int.Parse(numericValue);
         }
 
-        public static string ToCommand(string command, int value) => $"{command}{value}\n";
+        public static string ToCommand(string command, int value) => $"{command}{value}{DELIMITER}";
 
         public static bool IsSpeedValid(int value) => value >= 0 && value <= 255;
 

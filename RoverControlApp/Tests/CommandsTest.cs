@@ -213,5 +213,28 @@ namespace Tests
 
             Assert.That(data, Is.Null);
         }
+
+        [TestCase("T1\nD100\n")]
+        [TestCase("T100\nD1\n")]
+        public void IsMultipleValue_IsTrue(string commands)
+        {
+            Assert.That(Commands.IsMultipleValue(commands), Is.True);
+        }
+
+        [TestCase("T1\n")]
+        [TestCase("T1\n")]
+        public void IsMultipleValue_IsFalse(string commands)
+        {
+            Assert.That(Commands.IsMultipleValue(commands), Is.False);
+        }
+
+        [TestCase("T1\nD100\n")]
+        [TestCase("T100\nD1\n")]
+        public void ToCommandArray(string commands)
+        {
+            var value = Commands.ToCommandArray(commands);
+            Assert.That(value, Has.Length.EqualTo(2));
+            // TODO:
+        }
     }
 }
