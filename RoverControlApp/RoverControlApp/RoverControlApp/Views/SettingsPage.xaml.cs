@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 
 namespace RoverControlApp.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class SettingsPage : ContentPage
     {
-        public AboutPage()
+        public SettingsPage()
         {
             InitializeComponent();
         }

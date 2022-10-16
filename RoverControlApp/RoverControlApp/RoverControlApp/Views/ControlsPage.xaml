@@ -99,7 +99,7 @@
                             Grid.Column="2"
                             HorizontalOptions="End"
                             IsToggled="true"
-                            OnColor="#93cbf9"
+                            OnColor="{StaticResource PrimaryLight}"
                             Scale="1.2"
                             ThumbColor="{StaticResource Primary}" />
 
@@ -122,7 +122,7 @@
                             Grid.Column="2"
                             HorizontalOptions="End"
                             IsToggled="false"
-                            OnColor="#93cbf9"
+                            OnColor="{StaticResource PrimaryLight}"
                             Scale="1.2"
                             ThumbColor="{StaticResource Primary}" />
                     </Grid>

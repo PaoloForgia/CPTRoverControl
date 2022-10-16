@@ -228,13 +228,13 @@ namespace Tests
             Assert.That(Commands.IsMultipleValue(commands), Is.False);
         }
 
-        [TestCase("T1\nD100\n")]
-        [TestCase("T100\nD1\n")]
-        public void ToCommandArray(string commands)
+        [TestCase("T1\nD100\n", new string[] { "T1\n", "D100\n" })]
+        [TestCase("T100\nD1\n", new string[] { "T100\n", "D1\n" })]
+        public void ToCommandArray(string commands, string[] expectedValues)
         {
-            var value = Commands.ToCommandArray(commands);
-            Assert.That(value, Has.Length.EqualTo(2));
-            // TODO:
+            var values = Commands.ToCommandArray(commands);
+            Assert.That(values, Has.Length.EqualTo(2));
+            Assert.That(values, Is.EquivalentTo(expectedValues));
         }
     }
 }

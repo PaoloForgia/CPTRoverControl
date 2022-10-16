@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace RoverControlApp.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class SettingsViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public SettingsViewModel()
         {
-            Title = "About";
+            Title = "Settings";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 
