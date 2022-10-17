@@ -63,8 +63,10 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Effects\AndroidInputEntryEffect.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="BluetoothPermission.cs" />
+    <Compile Include="Renderer\InputCursorRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,6 +102,9 @@
       <Project>{4DED1FEB-8AEE-4DBD-A8F6-E6EF58738582}</Project>
       <Name>RoverControlApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\input_cursor.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

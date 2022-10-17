@@ -1370,3 +1370,5 @@ C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverCo
 C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\android\src\crc64515ee83f00766c60\SemanticEffectRouter_SemanticAccessibilityDelegate.java
 C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\android\src\crc64515ee83f00766c60\VisualFeedbackEffectRouter_FastRendererOnLayoutChangeListener.java
 C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\android\src\crc645b8ccbad6ecd7dce\SideMenuViewRenderer.java
+C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\res\drawable\input_cursor.xml
+C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\android\src\crc6450a678f9d1a72187\InputCursorRenderer.java

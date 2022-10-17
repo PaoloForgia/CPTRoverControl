@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 using static Xamarin.Essentials.Permissions;
 
-public class BluetoothPermission : BasePlatformPermission
+namespace RoverControlApp.Droid
 {
-    public override (string androidPermission, bool isRuntime)[] RequiredPermissions => new List<(string androidPermission, bool isRuntime)>
+    public class BluetoothPermission : BasePlatformPermission
     {
-        (Android.Manifest.Permission.BluetoothScan, true),
-        (Android.Manifest.Permission.BluetoothConnect, true)
-    }.ToArray();
+        public override (string androidPermission, bool isRuntime)[] RequiredPermissions => new List<(string androidPermission, bool isRuntime)>
+        {
+            (Android.Manifest.Permission.BluetoothScan, true),
+            (Android.Manifest.Permission.BluetoothConnect, true)
+        }.ToArray();
+    }
 }

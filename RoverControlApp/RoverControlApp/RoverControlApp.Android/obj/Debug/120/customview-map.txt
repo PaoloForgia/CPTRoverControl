@@ -29,6 +29,7 @@ foreground;obj\Debug\120\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\54\jl\res\layout\camerafragment.xml
 FrameLayout;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\layout\bottomtablayout.xml
 item;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\values\styles.xml
+item;obj\Debug\120\res\drawable\input_cursor.xml
 LinearLayout;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\layout\bottomtablayout.xml
 paths;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\55\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 resources;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\values\attrs.xml
@@ -36,10 +37,14 @@ resources;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlA
 resources;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\values\styles.xml
 resources;obj\Debug\120\res\values\colors.xml
 resources;obj\Debug\120\res\values\styles.xml
+selector;obj\Debug\120\res\drawable\input_cursor.xml
 set;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\anim\enterfromleft.xml
 set;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\anim\enterfromright.xml
 set;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\anim\exittoleft.xml
 set;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\anim\exittoright.xml
+shape;obj\Debug\120\res\drawable\input_cursor.xml
+size;obj\Debug\120\res\drawable\input_cursor.xml
+solid;obj\Debug\120\res\drawable\input_cursor.xml
 string;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\values\strings.xml
 style;C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp.Android\obj\Debug\120\lp\56\jl\res\values\styles.xml
 style;obj\Debug\120\res\values\styles.xml
