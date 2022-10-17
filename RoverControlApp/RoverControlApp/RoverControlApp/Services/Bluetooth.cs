@@ -15,7 +15,6 @@ namespace RoverControlApp.Services
     {
         // https://github.com/rostislav-nikitin/Plugin.BluetoothClassic
 
-        public static readonly string MODULE_NAME_PROPERTY = "module_name";
         public static readonly string MODULE_NAME_DEFAULT = "HC-05";
         private readonly IBluetoothAdapter _bluetoothAdapter;
         private BluetoothDeviceModel _device;
@@ -25,12 +24,7 @@ namespace RoverControlApp.Services
         {
             get 
             {
-                if (_device == null)
-                {
-                    var deviceName = Storage.ModuleName;
-
-                    _device = GetDevices().Where(device => device.Name == deviceName).FirstOrDefault();
-                }
+                if (_device == null) RefreshDevice();
                 return _device;
             }
         }
@@ -38,6 +32,13 @@ namespace RoverControlApp.Services
         public Bluetooth()
 		{
             _bluetoothAdapter = DependencyService.Resolve<IBluetoothAdapter>();
+        }
+
+        public void RefreshDevice()
+        {
+            var deviceName = Storage.ModuleName;
+
+            _device = GetDevices().Where(device => device.Name == deviceName).FirstOrDefault();
         }
 
         public bool Enabled => _bluetoothAdapter.Enabled;

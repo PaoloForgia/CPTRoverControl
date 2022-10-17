@@ -16,6 +16,7 @@ namespace RoverControlApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ControlsPage : ContentPage
     {
+        private readonly Bluetooth _bluetooth = new Bluetooth();
         private readonly BuzzerAction _buzzerAction = new BuzzerAction();
 
         public ControlsPage()
@@ -24,6 +25,27 @@ namespace RoverControlApp.Views
 
             leftSlider.Value = 128;
             rightSlider.Value = 128;
+        }
+
+        protected async override void OnAppearing()
+        {
+            if (!_bluetooth.Enabled)
+            {
+                _bluetooth.Enable();
+            }
+
+            _bluetooth.RefreshDevice();
+
+            var device = _bluetooth.Device;
+            if (device != null)
+            {
+                var connect = await _bluetooth.Connect(device);
+
+                Console.WriteLine($"Device is connected: {connect}");
+            } else
+            {
+                Console.WriteLine("Device not found");
+            }
         }
 
         void OnLeftSliderValueChanged(object sender, ValueChangedEventArgs args)

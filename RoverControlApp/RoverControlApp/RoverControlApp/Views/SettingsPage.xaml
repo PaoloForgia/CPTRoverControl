@@ -18,26 +18,51 @@
     </ContentPage.Resources>
 
     <StackLayout Margin="10">
+        <!--  Device name  -->
         <Frame Margin="10,10,10,10">
             <StackLayout Orientation="Vertical">
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
                     FontSize="Medium"
                     HorizontalOptions="Start"
                     Text="Nome dispositivo" />
                 <Entry
-                    Grid.Row="1"
-                    Grid.Column="0"
+                    x:Name="DeviceNameInput"
                     ClearButtonVisibility="WhileEditing"
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
                     Keyboard="Text"
-                    ReturnType="Done">
+                    ReturnType="Done"
+                    TextChanged="OnDeviceNameChange">
                     <Entry.Effects>
                         <effects:InputEntry />
                     </Entry.Effects>
                 </Entry>
+            </StackLayout>
+        </Frame>
+
+        <!--  Dead zone  -->
+        <Frame Margin="10,10,10,10">
+            <StackLayout Orientation="Vertical">
+                <Label
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    Text="Zona morta" />
+                <Entry
+                    x:Name="DeadZoneInput"
+                    ClearButtonVisibility="WhileEditing"
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
+                    Keyboard="Numeric"
+                    ReturnType="Done"
+                    TextChanged="OnDeadZoneChange">
+                    <Entry.Effects>
+                        <effects:InputEntry />
+                    </Entry.Effects>
+                </Entry>
+                <Label
+                    FontSize="Caption"
+                    HorizontalOptions="Start"
+                    Text="Indica il margine per il quale i valori per il motori sinistro e destro sono considerati fermi. L'intervallo consisterà in 128 ± il valore inserito." />
             </StackLayout>
         </Frame>
     </StackLayout>
