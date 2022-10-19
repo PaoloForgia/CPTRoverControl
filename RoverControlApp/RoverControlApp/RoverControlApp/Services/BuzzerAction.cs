@@ -7,22 +7,26 @@ namespace RoverControlApp.Services
 {
     public class BuzzerAction: RepeatableAction
     {
+        public BuzzerAction() : base()
+        {
+        }
+
         public void Start()
         {
-            base.Start(RunBuzzer, OnBuzzerStop);
+            Start(RunBuzzer, OnBuzzerStop);
         }
 
         void RunBuzzer(CancellationToken cancellationToken)
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                Console.WriteLine("B1\n");
+                _bluetooth.Send(Commands.Buzzer(true));
                 Thread.Sleep(1000);
             }
         }
         void OnBuzzerStop()
         {
-            Console.WriteLine("B0\n");
+            _bluetooth.Send(Commands.Buzzer(false));
         }
     }
 }

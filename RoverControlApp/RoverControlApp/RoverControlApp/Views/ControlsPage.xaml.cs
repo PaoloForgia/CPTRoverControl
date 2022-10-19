@@ -16,12 +16,15 @@ namespace RoverControlApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ControlsPage : ContentPage
     {
-        private readonly Bluetooth _bluetooth = new Bluetooth();
-        private readonly BuzzerAction _buzzerAction = new BuzzerAction();
+        private readonly Bluetooth _bluetooth;
+        private readonly BuzzerAction _buzzerAction;
 
         public ControlsPage()
         {
             InitializeComponent();
+
+            _bluetooth = Bluetooth.Instance;
+            _buzzerAction = new BuzzerAction();
 
             leftSlider.Value = 128;
             rightSlider.Value = 128;

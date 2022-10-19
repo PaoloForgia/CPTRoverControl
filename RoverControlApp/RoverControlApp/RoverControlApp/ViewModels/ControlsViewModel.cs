@@ -13,9 +13,6 @@ namespace RoverControlApp.ViewModels
 {
     public class ControlsViewModel: BaseViewModel
     {
-        private readonly Bluetooth _bluetooth = new Bluetooth();
-
-
         public ControlsViewModel()
         {
             Title = "Rover Controls";

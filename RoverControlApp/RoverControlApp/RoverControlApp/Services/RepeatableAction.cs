@@ -9,6 +9,12 @@ namespace RoverControlApp.Services
     public abstract class RepeatableAction
     {
         protected CancellationTokenSource _tokenSource;
+        protected Bluetooth _bluetooth;
+
+        public RepeatableAction()
+        {
+            _bluetooth = Bluetooth.Instance;
+        }
 
         protected void Start(Action<CancellationToken> action, Action onStop)
         {

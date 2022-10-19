@@ -11,14 +11,32 @@ using Xamarin.Forms.PlatformConfiguration;
 
 namespace RoverControlApp.Services
 {
+    // https://github.com/rostislav-nikitin/Plugin.BluetoothClassic
     public class Bluetooth
     {
-        // https://github.com/rostislav-nikitin/Plugin.BluetoothClassic
+        private static readonly Bluetooth instance = new Bluetooth();
 
         public static readonly string MODULE_NAME_DEFAULT = "HC-05";
         private readonly IBluetoothAdapter _bluetoothAdapter;
         private BluetoothDeviceModel _device;
         private IBluetoothManagedConnection _connection;
+
+        public static Bluetooth Instance
+        {
+            get
+            {
+                return instance;
+            }
+        }
+
+        static Bluetooth()
+        {
+        }
+
+        private Bluetooth()
+        {
+            _bluetoothAdapter = DependencyService.Resolve<IBluetoothAdapter>();
+        }
 
         public BluetoothDeviceModel Device
         {
@@ -29,10 +47,7 @@ namespace RoverControlApp.Services
             }
         }
 
-        public Bluetooth()
-		{
-            _bluetoothAdapter = DependencyService.Resolve<IBluetoothAdapter>();
-        }
+        
 
         public void RefreshDevice()
         {
