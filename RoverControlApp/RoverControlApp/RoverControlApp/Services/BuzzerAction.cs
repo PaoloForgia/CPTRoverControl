@@ -21,7 +21,7 @@ namespace RoverControlApp.Services
             while (!cancellationToken.IsCancellationRequested)
             {
                 _bluetooth.Send(Commands.Buzzer(true));
-                Thread.Sleep(1000);
+                Thread.Sleep(DELAY);
             }
         }
         void OnBuzzerStop()

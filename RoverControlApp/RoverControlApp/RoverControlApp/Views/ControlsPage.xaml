@@ -101,7 +101,8 @@
                             IsToggled="true"
                             OnColor="{StaticResource PrimaryLight}"
                             Scale="1.2"
-                            ThumbColor="{StaticResource Primary}" />
+                            ThumbColor="{StaticResource Primary}"
+                            Toggled="OnFrontLightToggle" />
 
                         <Label
                             Grid.Row="1"
@@ -124,7 +125,8 @@
                             IsToggled="false"
                             OnColor="{StaticResource PrimaryLight}"
                             Scale="1.2"
-                            ThumbColor="{StaticResource Primary}" />
+                            ThumbColor="{StaticResource Primary}"
+                            Toggled="OnBackLightToggle" />
                     </Grid>
                 </Frame>
             </StackLayout>
@@ -135,6 +137,7 @@
                     Margin="40,0,40,0"
                     BackgroundColor="#FF694F"
                     CharacterSpacing="1"
+                    Clicked="OnEmergencyStopClick"
                     CornerRadius="50"
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     FontSize="Large"
@@ -162,8 +165,8 @@
                     CornerRadius="50"
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     FontSize="Large"
-                    Pressed="TurnOnBuzzer"
-                    Released="TurnOffBuzzer"
+                    Pressed="OnBuzzerPressed"
+                    Released="OnBuzzerReleased"
                     Text="bell" />
                 <Slider
                     x:Name="rightSlider"

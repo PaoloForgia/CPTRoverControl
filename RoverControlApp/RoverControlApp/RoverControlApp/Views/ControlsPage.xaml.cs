@@ -18,6 +18,7 @@ namespace RoverControlApp.Views
     {
         private readonly Bluetooth _bluetooth;
         private readonly BuzzerAction _buzzerAction;
+        public bool EmergencyStop { get; set; }
 
         public ControlsPage()
         {
@@ -26,6 +27,7 @@ namespace RoverControlApp.Views
             _bluetooth = Bluetooth.Instance;
             _buzzerAction = new BuzzerAction();
 
+            EmergencyStop = false;
             leftSlider.Value = 128;
             rightSlider.Value = 128;
         }
@@ -51,6 +53,32 @@ namespace RoverControlApp.Views
             }
         }
 
+        void OnFrontLightToggle(object sender, ToggledEventArgs args)
+        {
+            _bluetooth.Send(Commands.LightFront(args.Value));
+        }
+
+        void OnBackLightToggle(object sender, ToggledEventArgs args)
+        {
+            _bluetooth.Send(Commands.LightBack(args.Value));
+        }
+
+        void OnEmergencyStopClick(object sender, EventArgs args)
+        {
+            EmergencyStop = !EmergencyStop;
+            _bluetooth.Send(Commands.EmergencyStop(EmergencyStop));
+        }
+
+        void OnBuzzerPressed(object sender, EventArgs args)
+        {
+            _buzzerAction.Start();
+        }
+
+        void OnBuzzerReleased(object sender, EventArgs args)
+        {
+            _buzzerAction.Stop();
+        }
+
         void OnLeftSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
             double value = args.NewValue;
@@ -61,16 +89,6 @@ namespace RoverControlApp.Views
         {
             double value = args.NewValue;
             // Console.WriteLine("Right Slider " + value);
-        }
-
-        void TurnOnBuzzer(object sender, EventArgs args)
-        {
-            _buzzerAction.Start();
-        }
-
-        void TurnOffBuzzer(object sender, EventArgs args)
-        {
-            _buzzerAction.Stop();
         }
     }
 }
