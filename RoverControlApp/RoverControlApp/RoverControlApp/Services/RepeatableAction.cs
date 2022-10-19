@@ -13,6 +13,8 @@ namespace RoverControlApp.Services
         protected CancellationTokenSource _tokenSource;
         protected Bluetooth _bluetooth;
 
+        public bool IsActive => _tokenSource != null;
+
         public RepeatableAction()
         {
             _bluetooth = Bluetooth.Instance;

@@ -80,6 +80,11 @@ namespace RoverControlApp.Services
             }
         }
 
+        public async void Disconnect()
+        {
+            if (_connection != null) _connection.Dispose();
+        } 
+
         public void Send(string command)
         {
             if (_connection == null) return;
