@@ -134,6 +134,7 @@
             <StackLayout VerticalOptions="CenterAndExpand">
                 <!--  middle controls  -->
                 <Button
+                    x:Name="EmergencyStopButton"
                     Margin="40,0,40,0"
                     BackgroundColor="#FF694F"
                     CharacterSpacing="1"

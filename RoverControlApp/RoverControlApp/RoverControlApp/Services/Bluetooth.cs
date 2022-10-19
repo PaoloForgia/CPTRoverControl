@@ -16,7 +16,6 @@ namespace RoverControlApp.Services
     {
         private static readonly Bluetooth instance = new Bluetooth();
 
-        public static readonly string MODULE_NAME_DEFAULT = "HC-05";
         private readonly IBluetoothAdapter _bluetoothAdapter;
         private BluetoothDeviceModel _device;
         private IBluetoothManagedConnection _connection;
@@ -47,8 +46,6 @@ namespace RoverControlApp.Services
             }
         }
 
-        
-
         public void RefreshDevice()
         {
             var deviceName = Storage.ModuleName;
@@ -57,6 +54,8 @@ namespace RoverControlApp.Services
         }
 
         public bool Enabled => _bluetoothAdapter.Enabled;
+
+        public bool Connected => _connection != null;
 
         public void Enable() => _bluetoothAdapter.Enable();
 
@@ -83,6 +82,8 @@ namespace RoverControlApp.Services
         public async void Disconnect()
         {
             if (_connection != null) _connection.Dispose();
+
+            _connection = null;
         } 
 
         public void Send(string command)

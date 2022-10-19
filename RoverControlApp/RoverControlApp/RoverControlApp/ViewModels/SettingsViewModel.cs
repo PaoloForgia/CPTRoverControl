@@ -10,9 +10,6 @@ namespace RoverControlApp.ViewModels
         public SettingsViewModel()
         {
             Title = "Settings";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
-
-        public ICommand OpenWebCommand { get; }
     }
 }

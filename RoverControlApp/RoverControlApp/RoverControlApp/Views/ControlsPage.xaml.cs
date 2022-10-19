@@ -1,5 +1,6 @@
 ﻿using RoverControlApp.Models;
 using RoverControlApp.Services;
+using RoverControlApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace RoverControlApp.Views
         private readonly LeftEngineAction _leftEngineAction;
         private readonly RightEngineAction _rightEngineAction;
 
+        public bool DisableComponent => _bluetooth.Connected;
+
         public bool EmergencyStop { get; set; }
 
         public ControlsPage()
@@ -35,8 +38,8 @@ namespace RoverControlApp.Views
             _rightEngineAction = new RightEngineAction();
 
             EmergencyStop = false;
-            leftSlider.Value = 128;
-            rightSlider.Value = 128;
+            leftSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
+            rightSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
         }
 
         protected async override void OnAppearing()
@@ -81,6 +84,8 @@ namespace RoverControlApp.Views
         {
             EmergencyStop = !EmergencyStop;
             _bluetooth.Send(Commands.EmergencyStop(EmergencyStop));
+
+            EmergencyStopButton.BackgroundColor = DynamicColors.EmergencyStopColor(EmergencyStop);
         }
 
         void OnBuzzerPressed(object sender, EventArgs args)
@@ -103,6 +108,10 @@ namespace RoverControlApp.Views
             int value = (int) args.NewValue;
 
             _leftEngineAction.Start(value);
+
+            var color = DynamicColors.EngineColor(Engine.IsMoving(value));
+            leftSlider.MinimumTrackColor = color;
+            leftSlider.ThumbColor = color;
         }
 
         void OnRightSliderValueChanged(object sender, ValueChangedEventArgs args)
@@ -115,6 +124,10 @@ namespace RoverControlApp.Views
             int value = (int) args.NewValue;
 
             _rightEngineAction.Start(value);
+
+            var color = DynamicColors.EngineColor(Engine.IsMoving(value));
+            rightSlider.MinimumTrackColor = color;
+            rightSlider.ThumbColor = color;
         }
     }
 }

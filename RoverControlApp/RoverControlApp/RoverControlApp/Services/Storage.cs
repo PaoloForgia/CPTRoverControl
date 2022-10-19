@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoverControlApp.Utils;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Essentials;
@@ -12,7 +13,7 @@ namespace RoverControlApp.Services
 
         public static string ModuleName
         {
-            get => Preferences.Get(MODULE_NAME_PROPERTY, Bluetooth.MODULE_NAME_DEFAULT);
+            get => Preferences.Get(MODULE_NAME_PROPERTY, DefaultValues.MODULE_NAME);
             set => Preferences.Set(MODULE_NAME_PROPERTY, value);
         }
 
