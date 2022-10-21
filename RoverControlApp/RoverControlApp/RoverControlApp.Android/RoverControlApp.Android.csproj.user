@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>Google Pixel 4</SelectedDevice>
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
-    <ActiveDebugProfile>Google Pixel 4 %28Android 13.0 - API 33%29</ActiveDebugProfile>
+    <ActiveDebugProfile>Google Pixel 4 %2813.0 Android - API 33%29</ActiveDebugProfile>
     <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
     <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>

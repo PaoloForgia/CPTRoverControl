@@ -1,4 +1,5 @@
-﻿using RoverControlApp.Models;
+﻿using Plugin.BluetoothClassic.Abstractions;
+using RoverControlApp.Models;
 using RoverControlApp.Services;
 using RoverControlApp.Utils;
 using System;
@@ -12,6 +13,7 @@ using System.Windows.Input;
 using System.Xml.Serialization;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace RoverControlApp.Views
@@ -54,7 +56,7 @@ namespace RoverControlApp.Views
             var device = _bluetooth.Device;
             if (device != null)
             {
-                var connect = await _bluetooth.Connect(device);
+                var connect = await _bluetooth.Connect(device, OnReceiveEvent);
 
                 Console.WriteLine($"Device is connected: {connect}");
             } else
@@ -68,6 +70,37 @@ namespace RoverControlApp.Views
             if (_leftEngineAction.IsActive) _leftEngineAction.Stop();
             if (_rightEngineAction.IsActive) _rightEngineAction.Stop();
             _bluetooth.Disconnect();
+        }
+
+        private void OnReceiveEvent(object sender, RecivedEventArgs args)
+        {
+            string received = Encoding.UTF8.GetString(args.Buffer.ToArray());
+            Console.WriteLine("Received: " + received);
+
+            if (Commands.IsMultipleValue(received))
+            {
+                var commands = Commands.ToCommandArray(received);
+                commands.ToList()
+                    .FindAll(command => Commands.IsValid(command))
+                    .ConvertAll(command => Commands.Translate(command))
+                    .ForEach(data => UpdateLabels(data));
+            } else
+            {
+                var data = Commands.Translate(received);
+                UpdateLabels(data);
+            }
+        }
+
+        private void UpdateLabels(Data data)
+        {
+            if (data.IsBattery)
+            {
+                batteryLabel.Text = $"{data.Value}%";
+            }
+            else if (data.IsDistance)
+            {
+                distanceLabel.Text = $"{data.Value} cm";
+            }
         }
 
         void OnFrontLightToggle(object sender, ToggledEventArgs args)

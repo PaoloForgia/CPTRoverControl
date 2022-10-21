@@ -4,7 +4,6 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:RoverControlApp.ViewModels"
-    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     Title="{Binding Title}">
     <ContentPage.BindingContext>
         <vm:ControlsViewModel />
@@ -41,11 +40,12 @@
                             HorizontalOptions="Start"
                             Text="Batteria" />
                         <Label
+                            x:Name="batteryLabel"
                             Grid.Row="0"
                             Grid.Column="2"
                             FontSize="Medium"
                             HorizontalOptions="End"
-                            Text="100%" />
+                            Text="{Binding Battery}" />
                         <Label
                             Grid.Row="1"
                             Grid.Column="0"
@@ -61,11 +61,12 @@
                             HorizontalOptions="Start"
                             Text="Distanza ostacolo" />
                         <Label
+                            x:Name="distanceLabel"
                             Grid.Row="1"
                             Grid.Column="2"
                             FontSize="Medium"
                             HorizontalOptions="End"
-                            Text="100 cm" />
+                            Text="{Binding Distance}" />
                     </Grid>
                 </Frame>
 

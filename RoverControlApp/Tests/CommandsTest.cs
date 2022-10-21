@@ -142,7 +142,7 @@ namespace Tests
         [TestCase("D100\n")]
         public void IsValidData_IsTrue(string data)
         {
-            Assert.That(Commands.IsValidData(data), Is.True);
+            Assert.That(Commands.IsValid(data), Is.True);
         }
 
 
@@ -173,7 +173,7 @@ namespace Tests
         [TestCase("D\n")]
         public void IsValidData_IsFalse(string data)
         {
-            Assert.That(Commands.IsValidData(data), Is.False);
+            Assert.That(Commands.IsValid(data), Is.False);
         }
 
         [TestCase("T0\n", 0)]

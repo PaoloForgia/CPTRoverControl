@@ -6,7 +6,8 @@ namespace RoverControlApp.Models
 {
     public class Data
     {
-        public string Name { get; set; }
         public int? Value { get; set; }
+        public bool IsBattery { get; set; } = false;
+        public bool IsDistance { get; set; } = false;
     }
 }

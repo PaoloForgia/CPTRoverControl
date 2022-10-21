@@ -61,12 +61,13 @@ namespace RoverControlApp.Services
 
         public IEnumerable<BluetoothDeviceModel> GetDevices() => _bluetoothAdapter.BondedDevices;
 
-        public async Task<bool> Connect(BluetoothDeviceModel bluetoothDeviceModel)
+        public async Task<bool> Connect(BluetoothDeviceModel bluetoothDeviceModel, Recived OnReceiveEvent)
         {
             try
             {
                 _connection = _bluetoothAdapter.CreateManagedConnection(bluetoothDeviceModel);
                 _connection.Connect();
+                _connection.OnRecived += OnReceiveEvent;
                 return true;
             }
             catch (Exception exception)
@@ -79,7 +80,7 @@ namespace RoverControlApp.Services
             }
         }
 
-        public async void Disconnect()
+        public void Disconnect()
         {
             if (_connection != null) _connection.Dispose();
 

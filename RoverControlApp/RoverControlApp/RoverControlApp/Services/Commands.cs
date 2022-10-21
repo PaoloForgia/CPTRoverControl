@@ -46,11 +46,11 @@ namespace RoverControlApp.Services
 
         public static Data Translate(string value)
         {
-            if (!IsValidData(value)) return null;
+            if (!IsValid(value)) return null;
 
             var type = value[0];
-            if (type.Equals('T')) return new Data() { Name = "Batteria", Value = GetValue(value) };
-            else if (type.Equals('D')) return new Data() { Name = "Distanza", Value = GetValue(value) };
+            if (type.Equals('T')) return new Data() { Value = GetValue(value), IsBattery = true };
+            else if (type.Equals('D')) return new Data() { Value = GetValue(value), IsDistance = true };
             else return null;
         }
 
@@ -79,7 +79,7 @@ namespace RoverControlApp.Services
 
         public static bool IsSpeedValid(int value) => value >= 0 && value <= 255;
 
-        public static bool IsValidData(string value)
+        public static bool IsValid(string value)
         {
             if (value == null) return false;
 
