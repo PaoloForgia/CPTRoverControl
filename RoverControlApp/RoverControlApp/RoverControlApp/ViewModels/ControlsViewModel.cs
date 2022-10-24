@@ -16,48 +16,23 @@ namespace RoverControlApp.ViewModels
 {
     public class ControlsViewModel: BaseViewModel
     {
-
-       public new event PropertyChangedEventHandler PropertyChanged;
-
-        string _battery;
-        string _distance;
+        private string battery;
+        private string distance;
         public ControlsViewModel()
         {
             Title = "Rover Controls";
+            Bluetooth.Instance.OnReceiveEvent = OnReceiveEvent;
         }
-
         public string Battery
         {
-            get
-            {
-                return _battery;
-            }
-            set
-            {
-                if (_battery != value)
-                {
-                    _battery = value;
-
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Battery"));
-                }
-            }
+            get { return battery; }
+            set { SetProperty(ref battery, value); }
         }
 
         public string Distance
         {
-            get
-            {
-                return _distance;
-            }
-            set
-            {
-                if (_distance != value)
-                {
-                    _distance = value;
-
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Distance"));
-                }
-            }
+            get { return distance; }
+            set { SetProperty(ref distance, value); }
         }
 
         public void OnReceiveEvent(object sender, RecivedEventArgs args)
@@ -82,14 +57,8 @@ namespace RoverControlApp.ViewModels
 
         private void UpdateLabels(Data data)
         {
-            if (data.IsBattery)
-            {
-                Battery = $"{data.Value}%";
-            }
-            else if (data.IsDistance)
-            {
-                Distance = $"{data.Value} cm";
-            }
+            if (data.IsBattery)  Battery = $"{data.Value}%";
+            else if (data.IsDistance)  Distance = $"{data.Value} cm";
         }
     }
 }

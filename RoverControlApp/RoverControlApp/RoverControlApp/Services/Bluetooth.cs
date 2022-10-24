@@ -16,9 +16,11 @@ namespace RoverControlApp.Services
     {
         private static readonly Bluetooth instance = new Bluetooth();
 
-        private readonly IBluetoothAdapter _bluetoothAdapter;
-        private BluetoothDeviceModel _device;
-        private IBluetoothManagedConnection _connection;
+        public Recived OnReceiveEvent { get; set; }
+
+        private readonly IBluetoothAdapter bluetoothAdapter;
+        private BluetoothDeviceModel device;
+        private IBluetoothManagedConnection connection;
 
         public static Bluetooth Instance
         {
@@ -34,15 +36,15 @@ namespace RoverControlApp.Services
 
         private Bluetooth()
         {
-            _bluetoothAdapter = DependencyService.Resolve<IBluetoothAdapter>();
+            bluetoothAdapter = DependencyService.Resolve<IBluetoothAdapter>();
         }
 
         public BluetoothDeviceModel Device
         {
             get 
             {
-                if (_device == null) RefreshDevice();
-                return _device;
+                if (device == null) RefreshDevice();
+                return device;
             }
         }
 
@@ -50,24 +52,24 @@ namespace RoverControlApp.Services
         {
             var deviceName = Storage.ModuleName;
 
-            _device = GetDevices().Where(device => device.Name == deviceName).FirstOrDefault();
+            device = GetDevices().Where(device => device.Name == deviceName).FirstOrDefault();
         }
 
-        public bool Enabled => _bluetoothAdapter.Enabled;
+        public bool Enabled => bluetoothAdapter.Enabled;
 
-        public bool Connected => _connection != null;
+        public bool Connected => connection != null;
 
-        public void Enable() => _bluetoothAdapter.Enable();
+        public void Enable() => bluetoothAdapter.Enable();
 
-        public IEnumerable<BluetoothDeviceModel> GetDevices() => _bluetoothAdapter.BondedDevices;
+        public IEnumerable<BluetoothDeviceModel> GetDevices() => bluetoothAdapter.BondedDevices;
 
-        public async Task<bool> Connect(BluetoothDeviceModel bluetoothDeviceModel, Recived OnReceiveEvent)
+        public async Task<bool> Connect(BluetoothDeviceModel bluetoothDeviceModel)
         {
             try
             {
-                _connection = _bluetoothAdapter.CreateManagedConnection(bluetoothDeviceModel);
-                _connection.Connect();
-                _connection.OnRecived += OnReceiveEvent;
+                connection = bluetoothAdapter.CreateManagedConnection(bluetoothDeviceModel);
+                connection.Connect();
+                connection.OnRecived += OnReceiveEvent;
                 return true;
             }
             catch (Exception exception)
@@ -82,16 +84,16 @@ namespace RoverControlApp.Services
 
         public void Disconnect()
         {
-            if (_connection != null) _connection.Dispose();
+            if (connection != null) connection.Dispose();
 
-            _connection = null;
+            connection = null;
         } 
 
         public void Send(string command)
         {
-            if (_connection == null) return;
+            if (connection == null) return;
 
-            _connection.Transmit(new Memory<byte>(Encoding.ASCII.GetBytes(command)));
+            connection.Transmit(new Memory<byte>(Encoding.ASCII.GetBytes(command)));
         }
     }
 }

@@ -2,6 +2,7 @@
 using RoverControlApp.Models;
 using RoverControlApp.Services;
 using RoverControlApp.Utils;
+using RoverControlApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,23 +22,22 @@ namespace RoverControlApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ControlsPage : ContentPage
     {
-        private readonly Bluetooth _bluetooth;
-        private readonly BuzzerAction _buzzerAction;
-        private readonly LeftEngineAction _leftEngineAction;
-        private readonly RightEngineAction _rightEngineAction;
+        private readonly BuzzerAction buzzerAction;
+        private readonly LeftEngineAction leftEngineAction;
+        private readonly RightEngineAction rightEngineAction;
 
-        public bool DisableComponent => _bluetooth.Connected;
+        public bool DisableComponent => Bluetooth.Instance.Connected;
 
         public bool EmergencyStop { get; set; }
 
         public ControlsPage()
         {
             InitializeComponent();
+            BindingContext = new ControlsViewModel();
 
-            _bluetooth = Bluetooth.Instance;
-            _buzzerAction = new BuzzerAction();
-            _leftEngineAction = new LeftEngineAction();
-            _rightEngineAction = new RightEngineAction();
+            buzzerAction = new BuzzerAction();
+            leftEngineAction = new LeftEngineAction();
+            rightEngineAction = new RightEngineAction();
 
             EmergencyStop = false;
             leftSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
@@ -46,17 +46,18 @@ namespace RoverControlApp.Views
 
         protected async override void OnAppearing()
         {
-            if (!_bluetooth.Enabled)
+            var bluetooth = Bluetooth.Instance;
+            if (!bluetooth.Enabled)
             {
-                _bluetooth.Enable();
+                bluetooth.Enable();
             }
 
-            _bluetooth.RefreshDevice();
+            bluetooth.RefreshDevice();
 
-            var device = _bluetooth.Device;
+            var device = bluetooth.Device;
             if (device != null)
             {
-                var connect = await _bluetooth.Connect(device, OnReceiveEvent);
+                var connect = await bluetooth.Connect(device);
 
                 Console.WriteLine($"Device is connected: {connect}");
             } else
@@ -67,80 +68,49 @@ namespace RoverControlApp.Views
 
         protected override void OnDisappearing()
         {
-            if (_leftEngineAction.IsActive) _leftEngineAction.Stop();
-            if (_rightEngineAction.IsActive) _rightEngineAction.Stop();
-            _bluetooth.Disconnect();
-        }
-
-        private void OnReceiveEvent(object sender, RecivedEventArgs args)
-        {
-            string received = Encoding.UTF8.GetString(args.Buffer.ToArray());
-            Console.WriteLine("Received: " + received);
-
-            if (Commands.IsMultipleValue(received))
-            {
-                var commands = Commands.ToCommandArray(received);
-                commands.ToList()
-                    .FindAll(command => Commands.IsValid(command))
-                    .ConvertAll(command => Commands.Translate(command))
-                    .ForEach(data => UpdateLabels(data));
-            } else
-            {
-                var data = Commands.Translate(received);
-                UpdateLabels(data);
-            }
-        }
-
-        private void UpdateLabels(Data data)
-        {
-            if (data.IsBattery)
-            {
-                batteryLabel.Text = $"{data.Value}%";
-            }
-            else if (data.IsDistance)
-            {
-                distanceLabel.Text = $"{data.Value} cm";
-            }
+            if (leftEngineAction.IsActive) leftEngineAction.Stop();
+            if (rightEngineAction.IsActive) rightEngineAction.Stop();
+            Bluetooth.Instance.Disconnect();
         }
 
         void OnFrontLightToggle(object sender, ToggledEventArgs args)
         {
-            _bluetooth.Send(Commands.LightFront(args.Value));
+            Bluetooth.Instance.Send(Commands.LightFront(args.Value));
         }
 
         void OnBackLightToggle(object sender, ToggledEventArgs args)
         {
-            _bluetooth.Send(Commands.LightBack(args.Value));
+            Bluetooth.Instance.Send(Commands.LightBack(args.Value));
         }
 
         void OnEmergencyStopClick(object sender, EventArgs args)
         {
             EmergencyStop = !EmergencyStop;
-            _bluetooth.Send(Commands.EmergencyStop(EmergencyStop));
+            Bluetooth.Instance.Send(Commands.EmergencyStop(EmergencyStop));
 
             EmergencyStopButton.BackgroundColor = DynamicColors.EmergencyStopColor(EmergencyStop);
         }
 
         void OnBuzzerPressed(object sender, EventArgs args)
         {
-            _buzzerAction.Start();
+            buzzerAction.Start();
         }
 
         void OnBuzzerReleased(object sender, EventArgs args)
         {
-            _buzzerAction.Stop();
+            buzzerAction.Stop();
         }
 
         void OnLeftSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
-            if (_leftEngineAction == null) return;
+            if (leftEngineAction == null) return;
 
             // Stop the previous
-            if (_leftEngineAction.IsActive) _leftEngineAction.Stop();
+            if (leftEngineAction.IsActive) leftEngineAction.Stop();
 
             int value = (int) args.NewValue;
 
-            _leftEngineAction.Start(value);
+            leftEngineAction.Start(value);
 
             var color = DynamicColors.EngineColor(Engine.IsMoving(value));
             leftSlider.MinimumTrackColor = color;
@@ -149,14 +119,14 @@ namespace RoverControlApp.Views
 
         void OnRightSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
-            if (_rightEngineAction == null) return;
+            if (rightEngineAction == null) return;
 
             // Stop the previous
-            if (_rightEngineAction.IsActive) _rightEngineAction.Stop();
+            if (rightEngineAction.IsActive) rightEngineAction.Stop();
 
             int value = (int) args.NewValue;
 
-            _rightEngineAction.Start(value);
+            rightEngineAction.Start(value);
 
             var color = DynamicColors.EngineColor(Engine.IsMoving(value));
             rightSlider.MinimumTrackColor = color;

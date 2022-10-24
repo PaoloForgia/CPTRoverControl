@@ -22,7 +22,7 @@ namespace RoverControlApp.Services
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                _bluetooth.Send(Commands.EngineRight(Speed));
+                bluetooth.Send(Commands.EngineRight(Speed));
                 Thread.Sleep(DELAY);
             }
         }

@@ -20,13 +20,13 @@ namespace RoverControlApp.Services
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                _bluetooth.Send(Commands.Buzzer(true));
+                bluetooth.Send(Commands.Buzzer(true));
                 Thread.Sleep(DELAY);
             }
         }
         void OnBuzzerStop()
         {
-            _bluetooth.Send(Commands.Buzzer(false));
+            bluetooth.Send(Commands.Buzzer(false));
         }
     }
 }

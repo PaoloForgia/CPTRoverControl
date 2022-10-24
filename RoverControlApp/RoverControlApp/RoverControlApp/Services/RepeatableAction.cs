@@ -10,26 +10,26 @@ namespace RoverControlApp.Services
     public abstract class RepeatableAction
     {
         protected static readonly int DELAY = 100;
-        protected CancellationTokenSource _tokenSource;
-        protected Bluetooth _bluetooth;
+        protected CancellationTokenSource tokenSource;
+        protected Bluetooth bluetooth;
 
-        public bool IsActive => _tokenSource != null;
+        public bool IsActive => tokenSource != null;
 
         public RepeatableAction()
         {
-            _bluetooth = Bluetooth.Instance;
+            bluetooth = Bluetooth.Instance;
         }
 
         protected void Start(Action<CancellationToken> action, Action onStop)
         {
-            _tokenSource = new CancellationTokenSource();
-            _tokenSource.Token.Register(() => onStop());
-            Task.Run(() => action(_tokenSource.Token), _tokenSource.Token);
+            tokenSource = new CancellationTokenSource();
+            tokenSource.Token.Register(() => onStop());
+            Task.Run(() => action(tokenSource.Token), tokenSource.Token);
         }
 
         public void Stop()
         {
-            _tokenSource.Cancel();
+            tokenSource.Cancel();
         }
     }
 }

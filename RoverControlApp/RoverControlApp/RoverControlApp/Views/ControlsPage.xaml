@@ -40,7 +40,6 @@
                             HorizontalOptions="Start"
                             Text="Batteria" />
                         <Label
-                            x:Name="batteryLabel"
                             Grid.Row="0"
                             Grid.Column="2"
                             FontSize="Medium"
@@ -61,7 +60,6 @@
                             HorizontalOptions="Start"
                             Text="Distanza ostacolo" />
                         <Label
-                            x:Name="distanceLabel"
                             Grid.Row="1"
                             Grid.Column="2"
                             FontSize="Medium"
