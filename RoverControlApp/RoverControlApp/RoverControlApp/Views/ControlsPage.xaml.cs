@@ -39,6 +39,9 @@ namespace RoverControlApp.Views
             leftEngineAction = new LeftEngineAction();
             rightEngineAction = new RightEngineAction();
 
+            // TODO: by default EmergencyStop = true; lights = off
+            // -> run commands
+
             EmergencyStop = false;
             leftSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
             rightSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
@@ -46,6 +49,9 @@ namespace RoverControlApp.Views
 
         protected async override void OnAppearing()
         {
+            // TODO: by default EmergencyStop = true; lights = off
+            // -> run commands
+
             var bluetooth = Bluetooth.Instance;
             if (!bluetooth.Enabled) bluetooth.Enable();
 
@@ -66,6 +72,8 @@ namespace RoverControlApp.Views
 
         protected override void OnDisappearing()
         {
+            // TODO: OnDisappearing -> EmergencyStop = true
+
             if (leftEngineAction.IsActive) leftEngineAction.Stop();
             if (rightEngineAction.IsActive) rightEngineAction.Stop();
             Bluetooth.Instance.Disconnect();
