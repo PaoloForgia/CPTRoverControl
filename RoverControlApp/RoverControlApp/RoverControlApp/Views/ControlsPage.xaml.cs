@@ -47,11 +47,9 @@ namespace RoverControlApp.Views
         protected async override void OnAppearing()
         {
             var bluetooth = Bluetooth.Instance;
-            if (!bluetooth.Enabled)
-            {
-                bluetooth.Enable();
-            }
+            if (!bluetooth.Enabled) bluetooth.Enable();
 
+            // Refreshing since the name could have changed
             bluetooth.RefreshDevice();
 
             var device = bluetooth.Device;

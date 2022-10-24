@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using RoverControlApp.Models;
@@ -54,19 +55,13 @@ namespace RoverControlApp.Services
             else return null;
         }
 
-        public static string[] ToCommandArray(string commands)
+        public static List<string> ToCommandList(string commands)
         {
             var splitValue = "|";
             var value = commands.Replace(DELIMITER, $"{DELIMITER}{splitValue}");
 
             var separators = splitValue.ToCharArray();
-            return value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-        }
-
-        public static bool IsMultipleValue(string value)
-        {
-            var values = ToCommandArray(value);
-            return values.Length > 1;
+            return value.Split(separators, StringSplitOptions.RemoveEmptyEntries).ToList();
         }
 
         private static int? GetValue(string value)

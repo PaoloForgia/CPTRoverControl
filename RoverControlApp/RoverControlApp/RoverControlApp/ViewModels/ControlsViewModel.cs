@@ -35,24 +35,15 @@ namespace RoverControlApp.ViewModels
             set { SetProperty(ref distance, value); }
         }
 
-        public void OnReceiveEvent(object sender, RecivedEventArgs args)
+        private void OnReceiveEvent(object sender, RecivedEventArgs args)
         {
             string received = Encoding.UTF8.GetString(args.Buffer.ToArray());
             Console.WriteLine("Received: " + received);
 
-            if (Commands.IsMultipleValue(received))
-            {
-                var commands = Commands.ToCommandArray(received);
-                commands.ToList()
-                    .FindAll(command => Commands.IsValid(command))
-                    .ConvertAll(command => Commands.Translate(command))
-                    .ForEach(data => UpdateLabels(data));
-            }
-            else
-            {
-                var data = Commands.Translate(received);
-                UpdateLabels(data);
-            }
+            Commands.ToCommandList(received)
+                .FindAll(command => Commands.IsValid(command))
+                .ConvertAll(command => Commands.Translate(command))
+                .ForEach(data => UpdateLabels(data));
         }
 
         private void UpdateLabels(Data data)
