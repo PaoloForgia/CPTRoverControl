@@ -25,10 +25,18 @@ namespace RoverControlApp.Views
         private readonly BuzzerAction buzzerAction;
         private readonly LeftEngineAction leftEngineAction;
         private readonly RightEngineAction rightEngineAction;
+        private bool emergencyStop;
 
         public bool DisableComponent => Bluetooth.Instance.Connected;
 
-        public bool EmergencyStop { get; set; }
+        public bool EmergencyStop 
+        { 
+            get { return emergencyStop; } 
+            set {
+                emergencyStop = value; 
+                EmergencyStopButton.BackgroundColor = DynamicColors.EmergencyStopColor(emergencyStop); 
+            } 
+        }
 
         public ControlsPage()
         {
@@ -38,20 +46,10 @@ namespace RoverControlApp.Views
             buzzerAction = new BuzzerAction();
             leftEngineAction = new LeftEngineAction();
             rightEngineAction = new RightEngineAction();
-
-            // TODO: by default EmergencyStop = true; lights = off
-            // -> run commands
-
-            EmergencyStop = false;
-            leftSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
-            rightSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
         }
 
         protected async override void OnAppearing()
         {
-            // TODO: by default EmergencyStop = true; lights = off
-            // -> run commands
-
             var bluetooth = Bluetooth.Instance;
             if (!bluetooth.Enabled) bluetooth.Enable();
 
@@ -68,11 +66,31 @@ namespace RoverControlApp.Views
             {
                 Console.WriteLine("Device not found");
             }
+
+            SetDefaultControls();
+        }
+
+        void SetDefaultControls()
+        {
+            // Default state: everything off
+            // UI
+            EmergencyStop = true;
+            frontLightSwitch.IsToggled = false;
+            backLightSwitch.IsToggled = false;
+            leftSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
+            rightSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
+            // Send commands
+            Bluetooth.Instance.Send(Commands.EmergencyStop(true));
+            Bluetooth.Instance.Send(Commands.LightFront(false));
+            Bluetooth.Instance.Send(Commands.LightBack(false));
+            Bluetooth.Instance.Send(Commands.EngineLeft(DefaultValues.ENGINE_STOP_VALUE));
+            Bluetooth.Instance.Send(Commands.EngineRight(DefaultValues.ENGINE_STOP_VALUE));
         }
 
         protected override void OnDisappearing()
         {
-            // TODO: OnDisappearing -> EmergencyStop = true
+            // To prevent losing control
+            SetDefaultControls();
 
             if (leftEngineAction.IsActive) leftEngineAction.Stop();
             if (rightEngineAction.IsActive) rightEngineAction.Stop();
@@ -93,8 +111,6 @@ namespace RoverControlApp.Views
         {
             EmergencyStop = !EmergencyStop;
             Bluetooth.Instance.Send(Commands.EmergencyStop(EmergencyStop));
-
-            EmergencyStopButton.BackgroundColor = DynamicColors.EmergencyStopColor(EmergencyStop);
         }
 
         void OnBuzzerPressed(object sender, EventArgs args)

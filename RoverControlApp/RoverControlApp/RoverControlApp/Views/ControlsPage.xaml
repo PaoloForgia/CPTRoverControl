@@ -94,6 +94,7 @@
                             HorizontalOptions="Start"
                             Text="Luce anteriore" />
                         <Switch
+                            x:Name="frontLightSwitch"
                             Grid.Row="0"
                             Grid.Column="2"
                             HorizontalOptions="End"
@@ -118,6 +119,7 @@
                             HorizontalOptions="Start"
                             Text="Luce posteriore" />
                         <Switch
+                            x:Name="backLightSwitch"
                             Grid.Row="1"
                             Grid.Column="2"
                             HorizontalOptions="End"

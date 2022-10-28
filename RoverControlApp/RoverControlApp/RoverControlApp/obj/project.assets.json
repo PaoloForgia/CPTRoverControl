@@ -2695,23 +2695,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paolo\\.nuget\\packages\\": {},
+    "C:\\Users\\paolo.forgia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj",
+      "projectUniqueName": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj",
       "projectName": "RoverControlApp",
-      "projectPath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj",
-      "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\obj\\",
+      "projectPath": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj",
+      "packagesPath": "C:\\Users\\paolo.forgia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\paolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paolo.forgia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
