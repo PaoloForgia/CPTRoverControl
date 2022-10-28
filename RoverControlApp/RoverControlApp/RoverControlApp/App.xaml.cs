@@ -22,6 +22,13 @@ namespace RoverControlApp
 
         protected override void OnSleep()
         {
+            // Send emergency stop and disconnect when the application is not in use
+            var bluetooth = Bluetooth.Instance;
+            if (bluetooth.Connected)
+            {
+                bluetooth.Send(Commands.EmergencyStop(true));
+                bluetooth.Disconnect();
+            }
         }
 
         protected override void OnResume()

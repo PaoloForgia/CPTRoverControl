@@ -8,8 +8,8 @@ namespace RoverControlApp.Utils
 {
     public class DynamicColors
     {
-        private static readonly Color EmergencyStopOff = Color.FromHex("#FF694F");
-        private static readonly Color EmergencyStopOn = Color.FromHex("#871D0A");
+        private static readonly Color EmergencyStopOff = Color.FromHex("#000000");
+        private static readonly Color EmergencyStopOn = Color.FromHex("#FF694F");
 
         private static readonly Color EngineStill = Color.FromHex("#2196F3");
         private static readonly Color EngineForward = Color.FromHex("#94f221");

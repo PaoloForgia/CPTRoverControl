@@ -48,7 +48,23 @@ namespace RoverControlApp.Views
             rightEngineAction = new RightEngineAction();
         }
 
-        protected async override void OnAppearing()
+        protected override void OnAppearing()
+        {
+            Connect();
+            SetDefaultControls();
+        }
+
+        protected override void OnDisappearing()
+        {
+            // To prevent losing control
+            SetDefaultControls();
+
+            if (leftEngineAction.IsActive) leftEngineAction.Stop();
+            if (rightEngineAction.IsActive) rightEngineAction.Stop();
+            Bluetooth.Instance.Disconnect();
+        }
+
+        void Connect()
         {
             var bluetooth = Bluetooth.Instance;
             if (!bluetooth.Enabled) bluetooth.Enable();
@@ -57,17 +73,10 @@ namespace RoverControlApp.Views
             bluetooth.RefreshDevice();
 
             var device = bluetooth.Device;
-            if (device != null)
-            {
-                var connect = await bluetooth.Connect(device);
-
-                Console.WriteLine($"Device is connected: {connect}");
-            } else
-            {
-                Console.WriteLine("Device not found");
-            }
-
-            SetDefaultControls();
+            if (device != null) bluetooth.Connect(device);
+            else Popup.DisplayAlert(
+                "Dispositivo non trovato.",
+                $"'{Storage.ModuleName}' non trovato tra i dispositivi collegati.\n\nControlla le impostazioni Bluetooth del telefono.");
         }
 
         void SetDefaultControls()
@@ -85,16 +94,6 @@ namespace RoverControlApp.Views
             Bluetooth.Instance.Send(Commands.LightBack(false));
             Bluetooth.Instance.Send(Commands.EngineLeft(DefaultValues.ENGINE_STOP_VALUE));
             Bluetooth.Instance.Send(Commands.EngineRight(DefaultValues.ENGINE_STOP_VALUE));
-        }
-
-        protected override void OnDisappearing()
-        {
-            // To prevent losing control
-            SetDefaultControls();
-
-            if (leftEngineAction.IsActive) leftEngineAction.Stop();
-            if (rightEngineAction.IsActive) rightEngineAction.Stop();
-            Bluetooth.Instance.Disconnect();
         }
 
         void OnFrontLightToggle(object sender, ToggledEventArgs args)

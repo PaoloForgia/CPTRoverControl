@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -17,6 +18,7 @@ namespace RoverControlApp.Services
         private static readonly Bluetooth instance = new Bluetooth();
 
         public Recived OnReceiveEvent { get; set; }
+        public StateChanged OnStateChangedEvent { get; set; }
 
         private readonly IBluetoothAdapter bluetoothAdapter;
         private BluetoothDeviceModel device;
@@ -63,23 +65,12 @@ namespace RoverControlApp.Services
 
         public IEnumerable<BluetoothDeviceModel> GetDevices() => bluetoothAdapter.BondedDevices;
 
-        public async Task<bool> Connect(BluetoothDeviceModel bluetoothDeviceModel)
+        public void Connect(BluetoothDeviceModel bluetoothDeviceModel)
         {
-            try
-            {
-                connection = bluetoothAdapter.CreateManagedConnection(bluetoothDeviceModel);
-                connection.Connect();
-                connection.OnRecived += OnReceiveEvent;
-                return true;
-            }
-            catch (Exception exception)
-            {
-                await Application.Current.MainPage.DisplayAlert("Connection error", 
-                    $"Can not connect to the device: {bluetoothDeviceModel.Name} Exception: {exception.Message}",
-                    "Close");
-
-                return false;
-            }
+            connection = bluetoothAdapter.CreateManagedConnection(bluetoothDeviceModel);
+            connection.Connect();
+            connection.OnRecived += OnReceiveEvent;
+            connection.OnStateChanged += OnStateChangedEvent;
         }
 
         public void Disconnect()

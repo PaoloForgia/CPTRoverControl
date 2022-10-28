@@ -1,6 +1,7 @@
 ﻿using Plugin.BluetoothClassic.Abstractions;
 using RoverControlApp.Models;
 using RoverControlApp.Services;
+using RoverControlApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,13 +17,6 @@ namespace RoverControlApp.ViewModels
 {
     public class ControlsViewModel: BaseViewModel
     {
-        private string battery;
-        private string distance;
-        public ControlsViewModel()
-        {
-            Title = "Rover Controls";
-            Bluetooth.Instance.OnReceiveEvent = OnReceiveEvent;
-        }
         public string Battery
         {
             get { return battery; }
@@ -34,11 +28,17 @@ namespace RoverControlApp.ViewModels
             get { return distance; }
             set { SetProperty(ref distance, value); }
         }
+        private string battery;
+        private string distance;
+        public ControlsViewModel()
+        {
+            Title = "Rover Controls";
+            Bluetooth.Instance.OnReceiveEvent = OnReceiveEvent;
+        }
 
         private void OnReceiveEvent(object sender, RecivedEventArgs args)
         {
             string received = Encoding.UTF8.GetString(args.Buffer.ToArray());
-            Console.WriteLine("Received: " + received);
 
             Commands.ToCommandList(received)
                 .FindAll(command => Commands.IsValid(command))
