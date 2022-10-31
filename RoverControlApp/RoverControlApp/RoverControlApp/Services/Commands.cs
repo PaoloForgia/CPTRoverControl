@@ -70,9 +70,9 @@ namespace RoverControlApp.Services
             return int.Parse(numericValue);
         }
 
-        public static string ToCommand(string command, int value) => $"{command}{value}{DELIMITER}";
+        private static string ToCommand(string command, int value) => $"{command}{value}{DELIMITER}";
 
-        public static bool IsSpeedValid(int value) => value >= 0 && value <= 255;
+        private static bool IsSpeedValid(int value) => value >= 0 && value <= 255;
 
         public static bool IsValid(string value)
         {

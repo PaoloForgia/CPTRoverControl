@@ -54,7 +54,7 @@ namespace RoverControlApp.Services
         {
             var deviceName = Storage.ModuleName;
 
-            device = GetDevices().Where(device => device.Name == deviceName).FirstOrDefault();
+            device = bluetoothAdapter.BondedDevices.Where(device => device.Name == deviceName).FirstOrDefault();
         }
 
         public bool Enabled => bluetoothAdapter.Enabled;
@@ -62,8 +62,6 @@ namespace RoverControlApp.Services
         public bool Connected => connection != null;
 
         public void Enable() => bluetoothAdapter.Enable();
-
-        public IEnumerable<BluetoothDeviceModel> GetDevices() => bluetoothAdapter.BondedDevices;
 
         public void Connect(BluetoothDeviceModel bluetoothDeviceModel)
         {
