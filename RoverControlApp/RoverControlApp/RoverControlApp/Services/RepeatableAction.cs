@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RoverControlApp.Services
 {
-    abstract class RepeatableAction
+    public abstract class RepeatableAction
     {
         protected static readonly int DELAY = 100;
         protected CancellationTokenSource tokenSource;
