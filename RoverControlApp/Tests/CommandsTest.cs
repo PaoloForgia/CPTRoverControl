@@ -184,7 +184,7 @@ namespace Tests
             var data = Commands.Translate(command);
 
             Assert.That(data, Is.Not.Null);
-            Assert.That(data.Name, Is.EqualTo("Batteria"));
+            Assert.That(data.IsBattery, Is.True);
             Assert.That(data.Value, Is.EqualTo(value));
         }
 
@@ -196,7 +196,7 @@ namespace Tests
             var data = Commands.Translate(command);
 
             Assert.That(data, Is.Not.Null);
-            Assert.That(data.Name, Is.EqualTo("Distanza"));
+            Assert.That(data.IsDistance, Is.True);
             Assert.That(data.Value, Is.EqualTo(value));
         }
 
@@ -212,29 +212,6 @@ namespace Tests
             var data = Commands.Translate(command);
 
             Assert.That(data, Is.Null);
-        }
-
-        [TestCase("T1\nD100\n")]
-        [TestCase("T100\nD1\n")]
-        public void IsMultipleValue_IsTrue(string commands)
-        {
-            Assert.That(Commands.IsMultipleValue(commands), Is.True);
-        }
-
-        [TestCase("T1\n")]
-        [TestCase("T1\n")]
-        public void IsMultipleValue_IsFalse(string commands)
-        {
-            Assert.That(Commands.IsMultipleValue(commands), Is.False);
-        }
-
-        [TestCase("T1\nD100\n", new string[] { "T1\n", "D100\n" })]
-        [TestCase("T100\nD1\n", new string[] { "T100\n", "D1\n" })]
-        public void ToCommandArray(string commands, string[] expectedValues)
-        {
-            var values = Commands.ToCommandArray(commands);
-            Assert.That(values, Has.Length.EqualTo(2));
-            Assert.That(values, Is.EquivalentTo(expectedValues));
         }
     }
 }

@@ -9,7 +9,7 @@ namespace RoverControlApp.ViewModels
     {
         public SettingsViewModel()
         {
-            Title = "Impostazioni";
+            Title = "Settings";
         }
     }
 }

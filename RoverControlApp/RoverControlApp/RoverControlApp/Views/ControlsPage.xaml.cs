@@ -33,9 +33,11 @@ namespace RoverControlApp.Views
         { 
             get { return emergencyStop; } 
             set {
-                emergencyStop = value; 
-                EmergencyStopButton.BackgroundColor = DynamicColors.EmergencyStopColor(emergencyStop); 
-            } 
+                emergencyStop = value;
+                EmergencyStopButton.Text = DynamicAttributes.EmergencyStopLabel(emergencyStop);
+                Console.WriteLine(DynamicAttributes.EmergencyStopLabel(emergencyStop));
+                EmergencyStopButton.BackgroundColor = DynamicAttributes.EmergencyStopColor(emergencyStop); 
+            }
         }
 
         public ControlsPage()
@@ -75,8 +77,8 @@ namespace RoverControlApp.Views
             var device = bluetooth.Device;
             if (device != null) bluetooth.Connect(device);
             else Popup.DisplayAlert(
-                "Dispositivo non trovato.",
-                $"'{Storage.ModuleName}' non trovato tra i dispositivi collegati.\n\nControlla le impostazioni Bluetooth del telefono.");
+                "Device not found.",
+                $"'{Storage.ModuleName}' is not found within the connected devices.\n\nCheck the Bluetooth settings.");
         }
 
         void SetDefaultControls()
@@ -133,7 +135,7 @@ namespace RoverControlApp.Views
 
             leftEngineAction.Start(value);
 
-            var color = DynamicColors.EngineColor(Engine.IsMoving(value));
+            var color = DynamicAttributes.EngineColor(Engine.IsMoving(value));
             leftSlider.MinimumTrackColor = color;
             leftSlider.ThumbColor = color;
         }
@@ -149,7 +151,7 @@ namespace RoverControlApp.Views
 
             rightEngineAction.Start(value);
 
-            var color = DynamicColors.EngineColor(Engine.IsMoving(value));
+            var color = DynamicAttributes.EngineColor(Engine.IsMoving(value));
             rightSlider.MinimumTrackColor = color;
             rightSlider.ThumbColor = color;
         }
