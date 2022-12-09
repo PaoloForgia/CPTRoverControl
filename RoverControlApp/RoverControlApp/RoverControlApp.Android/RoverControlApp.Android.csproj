@@ -74,7 +74,6 @@
     <Compile Include="Effects\AndroidInputEntryEffect.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="BluetoothPermission.cs" />
-    <Compile Include="Renderer\InputCursorRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -111,13 +110,10 @@
       <Name>RoverControlApp</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\input_cursor.xml" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadGenericExceptionInfoBarRoverControlAppAndroidHideInfoBar="True" XamarinHotReloadDebuggerTimeoutExceptionRoverControlAppAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionRoverControlAppAndroidHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarRoverControlAppAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

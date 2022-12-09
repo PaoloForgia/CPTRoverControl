@@ -46,7 +46,8 @@
                 <Label
                     FontSize="Medium"
                     HorizontalOptions="Start"
-                    Text="Zona morta" />
+                    Text="Zona morta"
+                    TextColor="Gray" />
                 <Entry
                     x:Name="DeadZoneInput"
                     ClearButtonVisibility="WhileEditing"

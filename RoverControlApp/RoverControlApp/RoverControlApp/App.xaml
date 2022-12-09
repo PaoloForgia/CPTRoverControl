@@ -4,12 +4,22 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <!--
-        Define global resources and styles here, that apply to all pages in your app.
+    Define global resources and styles here, that apply to all pages in your app.
     -->
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="PrimaryLight">#93cbf9</Color>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Gray" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style TargetType="Switch">
+                <Setter Property="OnColor" Value="{StaticResource PrimaryLight}" />
+                <Setter Property="ThumbColor" Value="{StaticResource Primary}" />
+            </Style>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="VisualStateManager.VisualStateGroups">

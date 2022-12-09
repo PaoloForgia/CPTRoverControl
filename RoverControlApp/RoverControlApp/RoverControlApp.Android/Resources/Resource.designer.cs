@@ -2518,7 +2518,6 @@ namespace RoverControlApp.Droid
 			global::Xamarin.CommunityToolkit.Resource.Layout.BottomTabLayout = global::RoverControlApp.Droid.Resource.Layout.BottomTabLayout;
 			global::Xamarin.CommunityToolkit.Resource.Layout.browser_actions_context_menu_page = global::RoverControlApp.Droid.Resource.Layout.browser_actions_context_menu_page;
 			global::Xamarin.CommunityToolkit.Resource.Layout.browser_actions_context_menu_row = global::RoverControlApp.Droid.Resource.Layout.browser_actions_context_menu_row;
-			global::Xamarin.CommunityToolkit.Resource.Layout.CameraFragment = global::RoverControlApp.Droid.Resource.Layout.CameraFragment;
 			global::Xamarin.CommunityToolkit.Resource.Layout.custom_dialog = global::RoverControlApp.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.CommunityToolkit.Resource.Layout.design_bottom_navigation_item = global::RoverControlApp.Droid.Resource.Layout.design_bottom_navigation_item;
 			global::Xamarin.CommunityToolkit.Resource.Layout.design_bottom_sheet_dialog = global::RoverControlApp.Droid.Resource.Layout.design_bottom_sheet_dialog;
@@ -24001,7 +24000,7 @@ namespace RoverControlApp.Droid
 			public const int browser_actions_context_menu_row = 2131427358;
 			
 			// aapt resource value: 0x7F0B001F
-			public const int CameraFragment = 2131427359;
+			public const int camerafragment = 2131427359;
 			
 			// aapt resource value: 0x7F0B0020
 			public const int custom_dialog = 2131427360;

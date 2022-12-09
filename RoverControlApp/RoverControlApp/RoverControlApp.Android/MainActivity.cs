@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Xamarin.Essentials;
+using AndroidX.AppCompat.App;
 
 namespace RoverControlApp.Droid
 {

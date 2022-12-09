@@ -99,9 +99,7 @@
                             Grid.Column="2"
                             HorizontalOptions="End"
                             IsToggled="true"
-                            OnColor="{StaticResource PrimaryLight}"
                             Scale="1.2"
-                            ThumbColor="{StaticResource Primary}"
                             Toggled="OnFrontLightToggle" />
 
                         <Label
@@ -124,9 +122,7 @@
                             Grid.Column="2"
                             HorizontalOptions="End"
                             IsToggled="false"
-                            OnColor="{StaticResource PrimaryLight}"
                             Scale="1.2"
-                            ThumbColor="{StaticResource Primary}"
                             Toggled="OnBackLightToggle" />
                     </Grid>
                 </Frame>

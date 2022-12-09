@@ -7,9 +7,9 @@
     Title="RoverControlApp">
 
     <!--
-        The overall app visual hierarchy is defined here, along with navigation.
-        
-        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    The overall app visual hierarchy is defined here, along with navigation.
+
+    https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
     -->
 
     <Shell.Resources>
@@ -29,8 +29,8 @@
             <Style BasedOn="{StaticResource BaseStyle}" TargetType="FlyoutItem" />
 
             <!--
-                Default Styles for all Flyout Items
-                https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
+            Default Styles for all Flyout Items
+            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
             -->
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
@@ -59,7 +59,7 @@
             </Style>
 
             <!--
-                Custom Style you can apply to any Flyout Item
+            Custom Style you can apply to any Flyout Item
             -->
             <Style
                 ApplyToDerivedTypes="True"
@@ -81,9 +81,9 @@
     </Shell.Resources>
 
     <!--
-        When the Flyout is visible this defines the content to display in the flyout.
-        FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element
-        https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
+    When the Flyout is visible this defines the content to display in the flyout.
+    FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element
+    https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
     <FlyoutItem Title="Rover Controls">
         <FlyoutItem.Icon>
@@ -94,15 +94,15 @@
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate local:ControlsPage}" Route="ControlsPage" />
     </FlyoutItem>
-    <FlyoutItem Title="Programs">
-        <FlyoutItem.Icon>
-            <FontImageSource
-                FontFamily="{StaticResource FontAwesomeSolid}"
-                Glyph="code"
-                Color="Black" />
-        </FlyoutItem.Icon>
-        <ShellContent ContentTemplate="{DataTemplate local:ProgramsPage}" Route="ProgramsPage" />
-    </FlyoutItem>
+    <!-- <FlyoutItem Title="Programs">
+    <FlyoutItem.Icon>
+    <FontImageSource
+    FontFamily="{StaticResource FontAwesomeSolid}"
+    Glyph="code"
+    Color="Black" />
+    </FlyoutItem.Icon>
+    <ShellContent ContentTemplate="{DataTemplate local:ProgramsPage}" Route="ProgramsPage" />
+    </FlyoutItem>-->
     <FlyoutItem Title="Settings">
         <FlyoutItem.Icon>
             <FontImageSource
