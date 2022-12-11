@@ -16,6 +16,8 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ListView x:Name="ListView" ItemsSource="{Binding .}" />
+    <ContentPage.Content>
+        <ListView x:Name="programsListView" />
+    </ContentPage.Content>
 
 </ContentPage>

@@ -1,4 +1,7 @@
-﻿using RoverControlApp.Services;
+﻿using RoverControlApp.Models;
+using RoverControlApp.Services;
+using SQLite;
+using SQLitePCL;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -13,10 +16,24 @@ namespace RoverControlApp.Views
         public ProgramsPage()
         {
             InitializeComponent();
-
-            BindingContext = new[] { "A", "B", "C" };
         }
 
-       
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var instance = await Database.Instance();
+            var connection = instance.Connection;
+
+           await connection.InsertAsync(new Program()
+            {
+                Name = "Demo",
+                LastChangeDate = DateTime.Now,
+            });
+
+            var programs = await connection.Table<Program>().ToListAsync();
+
+            programsListView.ItemsSource = programs;
+        }
     }
 }

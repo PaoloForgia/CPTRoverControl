@@ -9,15 +9,7 @@ namespace RoverControlApp.Models
 {
     internal class Constants
     {
-        public const string DatabaseFilename = "RoverPrograms.db3";
-
-        public const SQLiteOpenFlags Flags = 
-            // open the database in read/write mode
-            SQLite.SQLiteOpenFlags.ReadWrite |
-            // create the database if it doesn't exist
-            SQLite.SQLiteOpenFlags.Create |
-            // enable multi-threaded database access
-            SQLite.SQLiteOpenFlags.SharedCache;
+        private const string DatabaseFilename = "CPTRover.db3";
 
         public static string DatabasePath
         {
