@@ -11,6 +11,5 @@ namespace RoverControlApp.Models
         public int ProgramId { get; set; }
         public string Name { get; set; }
         public DateTime LastChangeDate { get; set; }
-        public ICollection<ActionsGroup> ActionsGroups { get; set; }
     }
 }

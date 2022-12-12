@@ -17,7 +17,30 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <ListView x:Name="programsListView" />
+        <ListView
+            x:Name="programsListView"
+            RowHeight="70"
+            SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="20,10" Orientation="Vertical">
+                            <Label
+                                FontSize="Medium"
+                                Text="{Binding Name}"
+                                TextColor="Black" />
+                            <Label FontSize="Caption" Text="{Binding LastChangeDate, StringFormat='Last updated {0:dd.MM.yyyy HH:mm}'}" />
+                        </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem
+                                CommandParameter="{Binding .}"
+                                IsDestructive="True"
+                                Text="Delete" />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 
 </ContentPage>

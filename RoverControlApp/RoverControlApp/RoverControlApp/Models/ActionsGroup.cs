@@ -10,10 +10,9 @@ namespace RoverControlApp.Models
         [PrimaryKey, AutoIncrement]
 
         public int ActionsGroupId { get; set; }
+        [Indexed]
         public int ProgramId { get; set; }
         public int Duration { get; set; }
         public int Index { get; set; }
-        public Program program;
-        public ICollection<Action> Actions { get; set; }
     }
 }

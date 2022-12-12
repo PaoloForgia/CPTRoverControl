@@ -25,13 +25,7 @@ namespace RoverControlApp.Views
             var instance = await Database.Instance();
             var connection = instance.Connection;
 
-           await connection.InsertAsync(new Program()
-            {
-                Name = "Demo",
-                LastChangeDate = DateTime.Now,
-            });
-
-            var programs = await connection.Table<Program>().ToListAsync();
+            var programs = await connection.Table<Program>().OrderByDescending(program => program.LastChangeDate).ToListAsync();
 
             programsListView.ItemsSource = programs;
         }
