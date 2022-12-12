@@ -40,3 +40,4 @@ C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\
 C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\RoverControlApp.pdb
 C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\ref\RoverControlApp.dll
 C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\Views\ProgramsPage.xaml.g.cs
+C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\Views\EditProgram.xaml.g.cs

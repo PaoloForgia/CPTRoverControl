@@ -19,6 +19,8 @@
     <ContentPage.Content>
         <ListView
             x:Name="programsListView"
+            ItemTapped="OnProgramSelect"
+            ItemsSource="{Binding .}"
             RowHeight="70"
             SelectionMode="None">
             <ListView.ItemTemplate>

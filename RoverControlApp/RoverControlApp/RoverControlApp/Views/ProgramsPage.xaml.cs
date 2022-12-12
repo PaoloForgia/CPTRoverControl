@@ -29,5 +29,12 @@ namespace RoverControlApp.Views
 
             programsListView.ItemsSource = programs;
         }
+
+        public async void OnProgramSelect(object sender, ItemTappedEventArgs e)
+        {
+            var program = (Program)e.Item;
+
+            await Navigation.PushAsync(new EditProgram(program));
+        }
     }
 }
