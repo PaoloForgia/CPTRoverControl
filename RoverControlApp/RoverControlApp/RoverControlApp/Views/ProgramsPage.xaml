@@ -24,12 +24,22 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="20,10" Orientation="Vertical">
-                            <Label
-                                FontSize="Medium"
-                                Text="{Binding Name}"
-                                TextColor="Black" />
-                            <Label FontSize="Caption" Text="{Binding LastChangeDate, StringFormat='Last updated {0:dd.MM.yyyy HH:mm}'}" />
+                        <StackLayout Padding="20,10" Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical">
+                                <Label
+                                    FontSize="Medium"
+                                    Text="{Binding Name}"
+                                    TextColor="Black" />
+                                <Label FontSize="Caption" Text="{Binding LastChangeDate, StringFormat='Last updated {0:dd.MM.yyyy HH:mm}'}" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal">
+                                <Button
+                                    CornerRadius="25"
+                                    FontFamily="{StaticResource FontAwesomeSolid}"
+                                    FontSize="Medium"
+                                    Text="Play"
+                                    WidthRequest="50" />
+                            </StackLayout>
                         </StackLayout>
                         <ViewCell.ContextActions>
                             <MenuItem
