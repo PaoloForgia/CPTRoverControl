@@ -10,11 +10,9 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
-        </StackLayout>
+        <StackLayout
+            x:Name="actionsGroupsContainer"
+            Padding="40"
+            Orientation="Vertical" />
     </ContentPage.Content>
 </ContentPage>
