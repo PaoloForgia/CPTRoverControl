@@ -24,7 +24,7 @@
                 <Label
                     FontSize="Medium"
                     HorizontalOptions="Start"
-                    Text="Nome dispositivo" />
+                    Text="Device name" />
                 <Entry
                     x:Name="DeviceNameInput"
                     ClearButtonVisibility="WhileEditing"
@@ -46,7 +46,7 @@
                 <Label
                     FontSize="Medium"
                     HorizontalOptions="Start"
-                    Text="Zona morta"
+                    Text="Dead zone"
                     TextColor="Gray" />
                 <Entry
                     x:Name="DeadZoneInput"
@@ -63,7 +63,7 @@
                 <Label
                     FontSize="Caption"
                     HorizontalOptions="Start"
-                    Text="Indica il margine per il quale i valori per il motori sinistro e destro sono considerati fermi. L'intervallo consisterà in 128 ± il valore inserito." />
+                    Text="Is the margin where the left and right engine are considered to be stopped. The interval will consist in 128 ± the value." />
             </StackLayout>
         </Frame>
     </StackLayout>
