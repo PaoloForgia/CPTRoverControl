@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace RoverControlApp.Models
 {
+    /// <summary>
+    /// Singleton instance of the Database connection.
+    /// </summary>
     public class Database
     {
         public SQLiteAsyncConnection Connection { get; private set; }

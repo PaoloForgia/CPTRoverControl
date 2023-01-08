@@ -5,6 +5,9 @@ using System.Text;
 
 namespace RoverControlApp.Models
 {
+    /// <summary>
+    /// Database entity ActionsGroup
+    /// </summary>
     public class ActionsGroup
     {
         [PrimaryKey, AutoIncrement]

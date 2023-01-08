@@ -5,6 +5,9 @@ using System.Text;
 
 namespace RoverControlApp.Utils
 {
+    /// <summary>
+    /// Utility file to display to perform checks related to the engine status of the rover.
+    /// </summary>
     public class Engine
     {
 

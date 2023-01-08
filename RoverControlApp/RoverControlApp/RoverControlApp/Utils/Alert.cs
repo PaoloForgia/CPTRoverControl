@@ -6,6 +6,9 @@ using Xamarin.Forms;
 
 namespace RoverControlApp.Utils
 {
+    /// <summary>
+    /// Utility file to display an alert or a propmpt
+    /// </summary>
     public class Popup
     {
 

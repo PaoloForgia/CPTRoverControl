@@ -9,7 +9,10 @@ using Action = System.Action;
 
 namespace RoverControlApp.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    /// <summary>
+    /// Base ViewModel that is used by all ViewModels
+    /// </summary>
+    public abstract class BaseViewModel : INotifyPropertyChanged
     {
         string title = string.Empty;
         public string Title

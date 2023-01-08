@@ -15,6 +15,9 @@ using Xamarin.Forms;
 
 namespace RoverControlApp.ViewModels
 {
+    /// <summary>
+    /// ViewModel for Controls
+    /// </summary>
     public class ControlsViewModel: BaseViewModel
     {
         public string State

@@ -6,6 +6,9 @@ using static RoverControlApp.Utils.Engine;
 
 namespace RoverControlApp.Utils
 {
+    /// <summary>
+    /// Utility file to toggle the labels and colors used in the Controls UI
+    /// </summary>
     public class DynamicAttributes
     {
         private static readonly string EmergencyStopOffLabel = "ENABLE STOP";

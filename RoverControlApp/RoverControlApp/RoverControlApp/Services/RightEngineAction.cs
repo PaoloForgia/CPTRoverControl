@@ -5,6 +5,11 @@ using System.Threading;
 
 namespace RoverControlApp.Services
 {
+    /// <summary>
+    /// Right Engine implementation of <c>RepeatableAction</c>.
+    /// <para />
+    /// Used to repeatedly send Bluetooth commands with a small delay.
+    /// </summary>
     public class RightEngineAction: RepeatableAction
     {
         public int Speed { get; set; }

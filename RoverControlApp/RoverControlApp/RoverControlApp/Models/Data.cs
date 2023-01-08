@@ -4,6 +4,9 @@ using System.Text;
 
 namespace RoverControlApp.Models
 {
+    /// <summary>
+    /// Class representing one of the possible incoming Bluetooth values.
+    /// </summary>
     public class Data
     {
         public int? Value { get; set; }

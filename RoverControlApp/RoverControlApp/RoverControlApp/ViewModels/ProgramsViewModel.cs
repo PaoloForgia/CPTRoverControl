@@ -5,6 +5,9 @@ using Xamarin.Forms;
 
 namespace RoverControlApp.ViewModels
 {
+    /// <summary>
+    /// ViewModel for Programs
+    /// </summary>
     public class ProgramsViewModel : BaseViewModel
     {
         public ProgramsViewModel()

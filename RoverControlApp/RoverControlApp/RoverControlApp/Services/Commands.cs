@@ -7,6 +7,9 @@ using RoverControlApp.Models;
 
 namespace RoverControlApp.Services
 {
+    /// <summary>
+    /// Generate commands to send, and validate received commands.
+    /// </summary>
     public class Commands
     {
         private readonly static string DELIMITER = "\n";

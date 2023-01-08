@@ -6,6 +6,9 @@ using Xamarin.Essentials;
 
 namespace RoverControlApp.Services
 {
+    /// <summary>
+    /// Manage the local storage of the application.
+    /// </summary>
     public class Storage
     {
         private static readonly string MODULE_NAME_PROPERTY = "module_name";

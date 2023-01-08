@@ -5,6 +5,9 @@ using System.Text;
 
 namespace RoverControlApp.Models
 {
+    /// <summary>
+    /// Database entity Program
+    /// </summary>
     public class Program
     {
         [PrimaryKey, AutoIncrement]

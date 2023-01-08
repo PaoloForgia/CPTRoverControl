@@ -7,6 +7,9 @@ using System.Text;
 
 namespace RoverControlApp.Models
 {
+    /// <summary>
+    /// Database constants
+    /// </summary>
     internal class Constants
     {
         private const string DatabaseFilename = "CPTRover.db3";

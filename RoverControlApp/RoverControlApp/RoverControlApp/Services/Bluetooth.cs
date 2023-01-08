@@ -12,7 +12,11 @@ using Xamarin.Forms.PlatformConfiguration;
 
 namespace RoverControlApp.Services
 {
-    // https://github.com/rostislav-nikitin/Plugin.BluetoothClassic
+    /// <summary>
+    /// Wrapper for external Bluetooth library to manage the connection status, the connected devices and send/receive data.
+    /// <para />
+    /// See https://github.com/rostislav-nikitin/Plugin.BluetoothClassic
+    /// </summary>
     public class Bluetooth
     {
         private static readonly Bluetooth instance = new Bluetooth();
@@ -73,7 +77,7 @@ namespace RoverControlApp.Services
 
         public void Disconnect()
         {
-            if (connection != null) connection.Dispose();
+            connection?.Dispose();
 
             connection = null;
         } 
