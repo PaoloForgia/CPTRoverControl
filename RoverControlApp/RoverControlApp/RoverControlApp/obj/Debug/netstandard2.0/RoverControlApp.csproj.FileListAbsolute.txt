@@ -19,7 +19,6 @@ C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverCo
 C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\bin\Debug\netstandard2.0\Microsoft.TestPlatform.AdapterUtilities.dll
 C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
 C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\bin\Debug\netstandard2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\bin\Debug\netstandard2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\bin\Debug\netstandard2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\bin\Debug\netstandard2.0\Microsoft.TestPlatform.AdapterUtilities.dll
 C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\bin\Debug\netstandard2.0\RoverControlApp.deps.json
@@ -41,3 +40,5 @@ C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\
 C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\ref\RoverControlApp.dll
 C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\Views\ProgramsPage.xaml.g.cs
 C:\Users\paolo\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\Views\EditProgram.xaml.g.cs
+C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\Views\EditProgram.xaml.g.cs
+C:\Users\paolo.forgia\workspace\CPTRoverControl\RoverControlApp\RoverControlApp\RoverControlApp\obj\Debug\netstandard2.0\Views\ProgramsPage.xaml.g.cs
