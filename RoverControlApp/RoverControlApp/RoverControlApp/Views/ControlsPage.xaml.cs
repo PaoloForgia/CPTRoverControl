@@ -76,7 +76,7 @@ namespace RoverControlApp.Views
 
             var device = bluetooth.Device;
             if (device != null) bluetooth.Connect(device);
-            else Popup.DisplayAlert(
+            else Alert.DisplayAlert(
                 "Device not found.",
                 $"'{Storage.ModuleName}' is not found within the connected devices.\n\nCheck the Bluetooth settings.");
         }

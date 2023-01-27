@@ -9,7 +9,7 @@ namespace RoverControlApp.Utils
     /// <summary>
     /// Utility file to display an alert or a propmpt
     /// </summary>
-    public class Popup
+    public class Alert
     {
 
         public static void DisplayAlert(string title, string description, string buttonText = "OK")
