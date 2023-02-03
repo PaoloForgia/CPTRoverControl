@@ -11,8 +11,15 @@ namespace RoverControlApp.Services
     /// </summary>
     public class Storage
     {
+        private static readonly string FIRST_STARTUP_PROPERTY = "first_startup";
         private static readonly string MODULE_NAME_PROPERTY = "module_name";
         private static readonly string DEAD_ZONE_PROPERTY = "dead_zone";
+
+        public static bool FirstStartup
+        {
+            get => Preferences.Get(FIRST_STARTUP_PROPERTY, DefaultValues.FIRST_STARTUP_PROPERTY);
+            set => Preferences.Set(FIRST_STARTUP_PROPERTY, value);
+        }
 
         public static string ModuleName
         {

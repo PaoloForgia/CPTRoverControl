@@ -10,6 +10,7 @@ namespace RoverControlApp.Utils
     /// </summary>
     public class DefaultValues
     {
+        public static readonly bool FIRST_STARTUP_PROPERTY = true;
         public static readonly string MODULE_NAME = "HC-05";
         public static readonly int ENGINE_STOP_VALUE = 128;
     }

@@ -54,6 +54,13 @@ namespace RoverControlApp.Views
         {
             Connect();
             SetDefaultControls();
+
+            var theme = Application.Current.RequestedTheme;
+            if (Storage.FirstStartup && theme == OSAppTheme.Dark)
+            {
+                Storage.FirstStartup = false;
+                Alert.DisplayAlert("Dark mode not supported", "It is suggested to disable the dark mode in order to use the application without issues.");
+            }
         }
 
         protected override void OnDisappearing()
@@ -131,7 +138,7 @@ namespace RoverControlApp.Views
             // Stop the previous
             if (leftEngineAction.IsActive) leftEngineAction.Stop();
 
-            int value = (int) args.NewValue;
+            var value = (int) args.NewValue;
 
             leftEngineAction.Start(value);
 
@@ -147,7 +154,7 @@ namespace RoverControlApp.Views
             // Stop the previous
             if (rightEngineAction.IsActive) rightEngineAction.Stop();
 
-            int value = (int) args.NewValue;
+            var value = (int) args.NewValue;
 
             rightEngineAction.Start(value);
 

@@ -58,7 +58,14 @@ namespace RoverControlApp.Services
         {
             var deviceName = Storage.ModuleName;
 
-            device = bluetoothAdapter.BondedDevices.Where(device => device.Name == deviceName).FirstOrDefault();
+            try
+            {
+                device = bluetoothAdapter.BondedDevices.Where(device => device.Name == deviceName).FirstOrDefault();
+            } catch(Exception ex)
+            {
+                // Ignore, Android is asking for permission to see the connected devices, just try again
+                RefreshDevice();
+            }
         }
 
         public bool Enabled => bluetoothAdapter.Enabled;

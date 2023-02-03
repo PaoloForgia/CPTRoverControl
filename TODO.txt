@@ -1,1 +1,3 @@
 Popup warning per dark mode al primo avvio
+
+-> Macchina virtuale con Visual Studio installato con applicativo che gira e Readme sul desktop
