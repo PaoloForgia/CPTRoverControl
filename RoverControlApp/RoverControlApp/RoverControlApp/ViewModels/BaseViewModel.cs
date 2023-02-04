@@ -39,7 +39,7 @@ namespace RoverControlApp.ViewModels
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             var changed = PropertyChanged;
-            if (changed == null)
+            if (changed is null)
                 return;
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));

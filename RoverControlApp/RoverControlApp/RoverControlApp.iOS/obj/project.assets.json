@@ -2548,24 +2548,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paolo.forgia\\.nuget\\packages\\": {},
+    "C:\\Users\\paolo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
       "projectName": "RoverControlApp.iOS",
-      "projectPath": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\paolo.forgia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\obj\\",
+      "projectPath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\RoverControlApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\paolo.forgia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2579,8 +2579,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj": {
-              "projectPath": "C:\\Users\\paolo.forgia\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj"
+            "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj": {
+              "projectPath": "C:\\Users\\paolo\\workspace\\CPTRoverControl\\RoverControlApp\\RoverControlApp\\RoverControlApp\\RoverControlApp.csproj"
             }
           }
         }
@@ -2617,7 +2617,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "È stato rilevato il downgrade del pacchetto Xamarin.Forms da 5.0.0.2545 a 5.0.0.2515. Fare riferimento al pacchetto direttamente dal progetto per selezionare una versione diversa. \r\n RoverControlApp.iOS -> RoverControlApp -> Xamarin.Forms (>= 5.0.0.2545) \r\n RoverControlApp.iOS -> Xamarin.Forms (>= 5.0.0.2515)",
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2545 to 5.0.0.2515. Reference the package directly from the project to select a different version. \r\n RoverControlApp.iOS -> RoverControlApp -> Xamarin.Forms (>= 5.0.0.2545) \r\n RoverControlApp.iOS -> Xamarin.Forms (>= 5.0.0.2515)",
       "libraryId": "Xamarin.Forms",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0",

@@ -49,7 +49,7 @@ namespace RoverControlApp.Services
         {
             get 
             {
-                if (device == null) RefreshDevice();
+                if (device is null) RefreshDevice();
                 return device;
             }
         }
@@ -91,7 +91,7 @@ namespace RoverControlApp.Services
 
         public void Send(string command)
         {
-            if (connection == null) return;
+            if (connection is null) return;
 
             connection.Transmit(new Memory<byte>(Encoding.ASCII.GetBytes(command)));
         }

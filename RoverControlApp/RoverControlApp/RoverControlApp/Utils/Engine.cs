@@ -15,8 +15,8 @@ namespace RoverControlApp.Utils
 
         public static EngineDirection IsMoving(int value)
         {
-            var minValue = DefaultValues.ENGINE_STOP_VALUE - Storage.DeadZone;
-            var maxValue = DefaultValues.ENGINE_STOP_VALUE + Storage.DeadZone;
+            var minValue = DefaultValues.EngineStopValue - Storage.DeadZone;
+            var maxValue = DefaultValues.EngineStopValue + Storage.DeadZone;
 
             if (value < minValue) return EngineDirection.Backward;
             else if (value > maxValue) return EngineDirection.Forward;

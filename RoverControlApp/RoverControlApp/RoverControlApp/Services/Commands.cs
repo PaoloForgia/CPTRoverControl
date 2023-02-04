@@ -79,13 +79,13 @@ namespace RoverControlApp.Services
 
         public static bool IsValid(string value)
         {
-            if (value == null) return false;
+            if (value is null) return false;
 
             // Uppercase letter followed by 1 to 3 numbers and ends with \n
             if (!Regex.IsMatch(value, "[A-Z][0-9]{1,3}\\n")) return false;
 
             var command = value[0];
-            var number = Int32.Parse(value.Substring(1, value.Length - 2));
+            var number = int.Parse(value.Substring(1, value.Length - 2));
 
             return number >= 0 && number <= GetMax(command);
         }

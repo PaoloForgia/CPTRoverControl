@@ -95,14 +95,14 @@ namespace RoverControlApp.Views
             EmergencyStop = true;
             frontLightSwitch.IsToggled = false;
             backLightSwitch.IsToggled = false;
-            leftSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
-            rightSlider.Value = DefaultValues.ENGINE_STOP_VALUE;
+            leftSlider.Value = DefaultValues.EngineStopValue;
+            rightSlider.Value = DefaultValues.EngineStopValue;
             // Send commands
             Bluetooth.Instance.Send(Commands.EmergencyStop(true));
             Bluetooth.Instance.Send(Commands.LightFront(false));
             Bluetooth.Instance.Send(Commands.LightBack(false));
-            Bluetooth.Instance.Send(Commands.EngineLeft(DefaultValues.ENGINE_STOP_VALUE));
-            Bluetooth.Instance.Send(Commands.EngineRight(DefaultValues.ENGINE_STOP_VALUE));
+            Bluetooth.Instance.Send(Commands.EngineLeft(DefaultValues.EngineStopValue));
+            Bluetooth.Instance.Send(Commands.EngineRight(DefaultValues.EngineStopValue));
         }
 
         void OnFrontLightToggle(object sender, ToggledEventArgs args)
@@ -133,7 +133,7 @@ namespace RoverControlApp.Views
 
         void OnLeftSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
-            if (leftEngineAction == null) return;
+            if (leftEngineAction is null) return;
 
             // Stop the previous
             if (leftEngineAction.IsActive) leftEngineAction.Stop();
@@ -149,7 +149,7 @@ namespace RoverControlApp.Views
 
         void OnRightSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
-            if (rightEngineAction == null) return;
+            if (rightEngineAction is null) return;
 
             // Stop the previous
             if (rightEngineAction.IsActive) rightEngineAction.Stop();

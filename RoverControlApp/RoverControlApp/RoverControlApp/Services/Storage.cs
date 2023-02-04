@@ -11,26 +11,33 @@ namespace RoverControlApp.Services
     /// </summary>
     public class Storage
     {
-        private static readonly string FIRST_STARTUP_PROPERTY = "first_startup";
-        private static readonly string MODULE_NAME_PROPERTY = "module_name";
-        private static readonly string DEAD_ZONE_PROPERTY = "dead_zone";
+        private const string firstStartupProperty = "first_startup";
+        private const string moduleNameProperty = "module_name";
+        private const string deadZoneProperty = "dead_zone";
+        private const string generateDemoProgramProperty = "generate_demo_program";
 
         public static bool FirstStartup
         {
-            get => Preferences.Get(FIRST_STARTUP_PROPERTY, DefaultValues.FIRST_STARTUP_PROPERTY);
-            set => Preferences.Set(FIRST_STARTUP_PROPERTY, value);
+            get => Preferences.Get(firstStartupProperty, DefaultValues.FirstStartup);
+            set => Preferences.Set(firstStartupProperty, value);
         }
 
         public static string ModuleName
         {
-            get => Preferences.Get(MODULE_NAME_PROPERTY, DefaultValues.MODULE_NAME);
-            set => Preferences.Set(MODULE_NAME_PROPERTY, value);
+            get => Preferences.Get(moduleNameProperty, DefaultValues.ModuleName);
+            set => Preferences.Set(moduleNameProperty, value);
         }
 
         public static int DeadZone
         {
-            get => Preferences.Get(DEAD_ZONE_PROPERTY, 10);
-            set => Preferences.Set(DEAD_ZONE_PROPERTY, value);
+            get => Preferences.Get(deadZoneProperty, DefaultValues.DeadZone);
+            set => Preferences.Set(deadZoneProperty, value);
+        }
+
+        public static bool GenerateDemoProgram
+        {
+            get => Preferences.Get(generateDemoProgramProperty, DefaultValues.GenerateDemoProgram);
+            set => Preferences.Set(generateDemoProgramProperty, value);
         }
     }
 }

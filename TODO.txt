@@ -1,2 +1,0 @@
-
--> Macchina virtuale con Visual Studio installato con applicativo che gira e Readme sul desktop
