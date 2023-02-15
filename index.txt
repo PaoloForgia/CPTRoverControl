@@ -1,0 +1,65 @@
+Lavoro di diploma SIG 2022\2023.
+Forgia Paolo
+
+PATH														DESCRIZIONE
+=================================							=========================================
+
+\doc														Documentazione
+\doc\00 Annuncio di progetto.pdf							Annuncio di progetto
+\doc\01 Manuale di progetto.pdf								Manuale di progetto
+\doc\02 Manuale operatore.pdf								Manuale operatore
+\doc\03 Manuale tecnico.pdf									Manuale tecnico
+\doc\04 Manuale utente.pdf									Manuale utente
+
+
+\allegati													Allegati di supporto alla documentazione
+\allegati\comunicazioni										Comunicazioni importanti
+\allegati\comunicazioni\Rimozione supporto iOS.pdf			Rimozione iPhone dalla lista dei dispositivi da supportare
+
+\allegati\mockup\Iniziale.pdf								Prima versione dei mock
+\allegati\mockup\Revisione 1.pdf							Versione iniziale revisionata
+\allegati\mockup\Revisione 2.pdf							Aggiunta della funzione Programs
+
+\allegati\prototipi\ReactNative.zip							Codice del prototipo in ReactNative
+\allegati\prototipi\ReactNative_result.png					Screenshot del risultato ottenuto con ReactNative
+\allegati\prototipi\Xamarin.zip								Codice del prototipo in Xamarin
+\allegati\prototipi\Xamarin_result.png						Screenshot del risultato ottenuto con Xamarin
+
+\allegati\release											Release
+\allegati\release\ch.cpt.rovercontrolapp_v1.0.apk			Prima release effettuata
+\allegati\release\ch.cpt.rovercontrolapp_v1.1.apk			Fix bug dark mode e aggiunta funzionalità (non completata) Programs
+
+\allegati\video\HTerm.mp4									Video dimostrazione di HTerm in funzione
+
+\allegati\CostiBenefici.xlsx								Excel con i costi e benefici dell'applicazione mobile e radiocomando meccanico
+\allegati\Diagrammi.eapx									Diagrammi creati
+\allegati\Gantt.gan											Gantt
+\allegati\Manuale HC-05.pdf									Manuale del modulo Bluetooth HC-05
+\allegati\Organigramma completo.pdf							Organigramma completo della CPT di Bellinzona
+\allegati\Organigramma parziale.pdf							Organigramma parziale per rappresentare l'organigramma del mandante
+\allegati\Progetto Rover.zip								Progetto effettuato dallo studente della SAM di Bellinzona
+\allegati\Quaderno dei compiti.pdf							Descrizione del rover con dettagli tecnici e obiettivi (ricevuta dal mandante)
+\allegati\Requisiti.xlsx									Requisiti del progetto
+\allegati\Vision.pdf										Vision
+
+
+\sources													Codice sorgente dell'applicativo creato
+
+
+\utility-programs											Programmi di supporto
+\utility-programs\haxm-windows_v7_8_0.zip					Eseguibile per l'installazione di HAXM
+\utility-programs\hterm.Excel								Eseguibile per HTerm (è portable)
+
+
+\support													Programmi di supporto
+\support\VirtualBox											Macchina virtuale con Windows con ambiente di sviluppo configurato
+
+
+
+
+
+Procedure per installare il software
+============================================
+1. Passarsi sul telefono \allegati\release\ch.cpt.rovercontrolapp_v1.1.apk
+2. Abilitare sul telefono l'installazione di app sconosciute
+3. Sul telefono eseguire ch.cpt.rovercontrolapp_v1.1.apk
